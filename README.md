@@ -5,7 +5,7 @@ Major project on Network Intrusion Detection System
 - majorproj-main
   - contains images, LaTEX files and project report in pdf format
 - afaiLabeling
-  - contains 2/3 of the validation set we created
+  - contains 2/3 of the validation set we created(DDOS dataset had size greater than 25 MB)
 - micMultiBB1
   - a folder containing the saved LSTM model
 - X_val_nulti_with_ping.csv and y_val_multi_with_ping.csv
