@@ -3,8 +3,8 @@ Major project on Network Intrusion Detection System
 
 ## Repository structure
 - majorproj-main
-  - contains images, LaTEX files and project report in pdf format.
--afaiLabeling
+  - contains images, LaTEX files and project report in pdf format
+- afaiLabeling
   - contains 2/3 of the validation set we created
 - micMultiBB1
   - a folder containing the saved LSTM model
