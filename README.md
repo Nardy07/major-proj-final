@@ -4,6 +4,8 @@ Major project on Network Intrusion Detection System
 ## Repository structure
 - majorproj-main
   - contains images, LaTEX files and project report in pdf format.
+-afaiLabeling
+  - contains 2/3 of the validation set we created
 - micMultiBB1
   - a folder containing the saved LSTM model
 - X_val_nulti_with_ping.csv and y_val_multi_with_ping.csv
