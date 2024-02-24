@@ -11,7 +11,7 @@ Major project on Network Intrusion Detection System
 - for_test.ipynb
   - preprocessing the validation dataset
 - preprocessBB.py
-  - preprocessing the original dataste
+  - preprocessing the original dataset
 - lstMulti.py and lstMulti.ipynb
   - code containing the LSTM model used in the project.
 ## Dataset
