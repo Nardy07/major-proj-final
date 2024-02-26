@@ -25,7 +25,7 @@
 \newif\ifhassupervisor
 \hassupervisortrue % to display supervisor name use command- \hassupervisortrue
 \newcommand{\supervisor}{Babu Ram Dawadi} % Specify Name of Supervisor for Major Project (write "none" if no Supervisor is assigned)
-\newcommand{\degSup}{Supervisor's Designation\\Second Line of Designation (if required)} %Specify Designation of Supervisor for Major Project, use multiple lines (\\) if necessary
+\newcommand{\degSup}{Asst. Professor\\Department of Electronics and Computer Engineering,IOE\\Pulchowk\\Co-Chairman\\Laboratory for ICT Research and Development,IOE\\TU} %Specify Designation of Supervisor for Major Project, use multiple lines (\\) if necessary
 \newcommand{\external}{External's Name} %Specify Name of External for Major Project (Required for Black Book)
 \newcommand{\degExternal}{External's Designation\\Second Line of Designation (if required)} %Specify Name of External for Major Project (Required for Black Book) , use multiple lines (\\) if necessary
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -52,9 +52,9 @@
 
 \chapter*{Abstract} % The summary of your report
 \addcontentsline{toc}{chapter}{Abstract}%to include %this chapter in TOC 
-blablablaa
+Network intrusion attacks have significantly increased in recent years, which creates serious privacy and security concerns. Technology development has made cyber-security threats more sophisticated, to the point where the detection mechanisms in place are unable to handle the problem. Therefore, the key to solving this issue would be the deployment of a clever and efficient network intrusion detection system. In order to create an intelligent detection system that can recognize many types of network intrusions, we are using deep learning technique in this project, namely Long Short-Term Memory (LSTM). One of the most recent realistic dataset, InSDN datasets, was used for training and evaluation in order to demonstrate the effectiveness of the suggested system. To evaluate the model, we have used evaluation metrics like accuracy, precision, True Positive Rate, False Positive Rate.
 \par
-\textbf{\textit{Keywords$-$}} \emph{LSTM, SDN,  ,}
+\textbf{\textit{Keywords$-$}} \emph{LSTM,Network Intrusion Detection System (NIDS), InSDN dataset}
 
 \chapter*{Acknowledgment}
 \addcontentsline{toc}{chapter}{Acknowledgment}%to include this chapter in TOC
@@ -97,7 +97,9 @@ Finally we would like to thank our family and friends for all the support and en
 \textbf{FN}: False  Negative \\
 \textbf{FP}: False Positive\\
 \textbf{IDS}: Intrusion Detection System\\
-\textbf{LSTM}: Long Short Term Memory\\
+\textbf{LSTM}: Long Short-Term Memory\\
+\textbf{RFC}: Random Forest Classifier\\
+\textbf{RFE}: Recursive Feature Elimination\\
 \textbf{R2L}: Root to Local \\
 \textbf{TN}: True Negative\\
 \textbf{TP}: True Positive\\
@@ -203,7 +205,7 @@ The purpose of the economic feasibility assessment is to determine the positive 
 \begin{center}
 	%\includegraphics[width = 3in]{images/logo.png}
 	\includegraphics[width=6in,height=2in
-	]{images/real_n.png} 
+	]{images/gantt26.png} 
 	\caption{Gantt Chart} %figure name
 	\label{figGanttChart} % for referencing
 \end{center}
@@ -231,10 +233,50 @@ In the paper "An Intrusion Detection System Using a Deep Neural Network With Gat
 In the paper "A Flow-Based Anomaly Detection Approach With Feature Selection Method Against DDoS Attacks in SDNs", the aim is to provide an overview of the existing research and studies related to DDoS attack detection in SDN networks. It aims to identify the gaps in the current knowledge and highlight the need for further research in this area. It also helps to establish the theoretical foundation for the proposed approach and validate its effectiveness by comparing it with previous works. Additionally, it provides a context for understanding the significance and relevance of the research conducted in the document.\cite{9810168}
 \par 
 In the paper "Securing IoT and SDN systems using deep-learning based automatic intrusion detection", Secured Automatic Two-level Intrusion Detection System (SATIDS) based on an improved Long Short-Term Memory (LSTM) network was proposed. Deep learning techniques, such as LSTM networks, have been utilized to detect and prevent network attacks. The use of LSTM networks in cyber defense has several benefits, including the ability to gain insights into threats and stay ahead of opponents. The SATIDS system aims to accurately identify suspicious activities and types of attacks in IoT and SDN networks. It utilizes an improved LSTM network that classifies traffic into normal or attack, determines the attack category, and defines the attack sub-type. The system has been trained and tested using realistic datasets, such as the ToN-IoT and InSDN datasets. The performance of the SATIDS system has been compared to other IDSs, and it has been found to achieve better performance in terms of accuracy, precision, F1-score, and detection rate. The system has shown high accuracy in differentiating between normal and anomalous traffic, as well as in detecting specific types of attacks, such as backdoor attacks and DDOS attacks. Overall, the proposed SATIDS system based on LSTM network offers an effective approach to intrusion detection in IoT and SDN networks. It provides accurate identification of attacks and can help enhance the security of these networks.\cite{ELSAYED2023102211}
-\chapter{Methodology}
+\chapter{System Architecture and Methodology}
 \vspace{-18pt}
-  \section{Working Mechanism}
-  \vspace{-18pt}
+\section{Theoretical Background}
+\subsection{LSTM Operation}
+\vspace{-18pt}
+LSTM is a popular deep learning technique in RNN for time series prediction. While standard RNNs outperform traditional networks in preserving information, they are not very effective in learning long term dependencies due to the vanishing gradient problem. An LSTM is well-suited to classify and/or predict time-series data. There are several architectures of LSTM units. A common architecture is composed of a memory cell, an input gate, an output gate and a forget gate. The mathematical formulation of the LSTM cell is given below:
+\begin{eqnarray}
+	f_t = \sigma(x_tW_f + H_{t-1}U_f)\\
+	o_t = \sigma(x_tW_o + H_{t-1}U_o)\\
+	S_t = \sigma(S_{t-1} *f_t + i_t * H^{'}_t)\\
+	i_t = \sigma(x_tW_i + H_{t-1}U_i)\\
+	H^{'}_t = tanh(x_tW_g + H_{t-1}U_g)\\
+	H_t = tanh(S_t)*o_t
+\end{eqnarray}
+\begin{figure}[tbh] % tbh means top, bottom or here (priority: left to right)
+	\begin{center}
+		%\includegraphics[width = 3in]{images/logo.png}
+		\includegraphics[width=6in]{images/l1.png} 
+		\caption{LSTM} %figure name
+		\label{LSTM} % for referencing
+	\end{center}
+\end{figure}
+\newpage
+\subsection{Activation Function}
+\vspace{-18pt}
+The activation function in a neural network is a mathematical function that is applied to a network node's output and decides whether or not the output of the node should be activated based on the weighted total of the inputs. Softmax activation function was employed in the project's models.
+\subsubsection{Softmax}
+\vspace{-18pt}
+Softmax is an activation function that scales numbers/logits into probabilities. The output of a Softmax is a vector (say v) with probabilities of each possible outcome. The probabilities in vector v sums to one for all possible outcomes or classes. Mathematically, Softmax is defined as: 
+\begin{eqnarray}
+	S(z_{i}) = \frac{exp(z_{i})}{\sum_{j=1}^{n} exp(z_{j})}
+\end{eqnarray}
+where z is an input vector to a softmax function,S, n is number of classes(possible outcomes), denominator denotes a normalization term whereas the numerator denotes the standard exponential function applied on the i-th element of the input vector.
+\subsection{Categorical Cross-Entropy}
+\vspace{-18pt}
+Categorical cross-entropy loss is utilized in multi-class classification tasks with more than two mutually exclusive classes. Similarly to the binary, this type of cross-entropy loss function quantifies the dissimilarity between the predicted probabilities and the true categorical labels. The categorical cross-entropy loss function is commonly used in neural networks with softmax activation in the output layer for multi-class classification tasks. By minimizing loss, the model learns to assign higher probabilities to the correct class while reducing the probabilities for incorrect classes, improving accuracy.
+\subsection{Adam Optimizer}
+\vspace{-18pt}
+The Adam optimizer is a popular optimization algorithm used in training deep neural networks. It combines the advantages of two other optimization techniques: AdaGrad and RMSProp. Adam maintains adaptive learning rates for each parameter by calculating an exponentially decaying average of past gradients and their squares. This allows it to dynamically adjust the learning rate for each parameter, typically resulting in faster convergence and better performance compared to traditional optimization algorithms. Adam also includes bias correction to prevent the initial steps from being too large. Overall, Adam is well-suited for a wide range of deep learning tasks due to its efficiency, robustness, and ease of use, often requiring minimal hyper parameter tuning.
+\subsection{Dropout}
+\vspace{-18pt}
+Dropout is a regularization technique for neural networks, introduced by Geoffrey Hinton, et.al, in 2012. Dropout involves randomly setting a fraction of activation of neurons to 0. This reduces the amount of information available to each layer, forcing the network to learn multiple independent representations of the same data. This makes the network more robust to overfitting. In practice, during each forward pass, each activation in the network is set to zero with a certain probability (e.g., 50\%), effectively dropping out that activation and its corresponding nodes in the network. During the backward pass, the gradients are computed normally and then multiplied by a factor that corresponds to the keep probability. This allows the network to learn to ‘turn on’ different nodes and combinations of nodes to model the data. In a deep neural network architecture, dropout layers are inserted between the dense layers or the convolution layers. The keep probability is typically set to a value between 0.5 and 0.8, depending on the size and complexity of the network and the size of the training data.
+\section{Working Mechanism}
+\vspace{-18pt}
 The development of Network Intrusion Detection System involves major steps which is 
 depicted in the diagram given below:
 \begin{figure}[tbh] % tbh means top, bottom or here (priority: left to right)
@@ -245,7 +287,7 @@ depicted in the diagram given below:
 	\label{Working mechanism of Network Intrusion Detection System} % for referencing
 \end{center}
 \end{figure}
-\newpage
+
 \subsection{Data set}
 \vspace{-18pt}
 InSDN is a comprehensive Software-Defined Network (SDN) dataset for Intrusion detection system evaluation. The new dataset includes the benign and various attack categories  that can occur in different elements of the SDN standard. InSDN considers different attack, including DoS, DDoS, brute force attack, web applications, exploitation, probe, and botnet. Furthermore, the normal traffic in the generated data covers  various  popular  application services such as HTTPS, HTTP, SSL, DNS, Email, FTP, SSH, etc. The dataset was generated by using four virtual machines (VMs). The first virtual machine is a Kali Linux one and represents the attacker server. The secondary machine is a Ubuntu 16.4 one, and acts on the ONOS controller. Third is an Ubuntu 16.4 machine to serve for the Mininet and OVS switch. The forth virtual machine is a Linux one based on metasploitable 2 to provide vulnerable services for demonstrating common vulnerabilities.\cite{article}
@@ -259,56 +301,43 @@ InSDN is a comprehensive Software-Defined Network (SDN) dataset for Intrusion de
 \end{figure}
 \subsection{Data Preprocessing}
 \vspace{-18pt}
-We used the InSDN dataset. Because the input should be a numeric matrix, we must convert some non-numeric features, into numeric form using label encoding. For the efficient training of neural networks, input data should be transformed by performing some pre-processing known as data normalization. It is used where inputs are widely divergent. Without such a process, networks would take a long time to train. Different schemes can be used to normalise the input data before it is fed to the input layer of neural network. We have used Z-score normalization to normalize the attributes of our dataset. Z-score normalization refers to the process of normalizing every value in a dataset such that the mean of all of the values is 0 and the standard deviation is 1. Mathematically,
+We used the InSDN datasets and first dropped some label values in the Label column. The label values that were dropped from the dataset were U2R, BFA and DoS. Then we dropped columns like Timestamp, Flow\_ID, Src\_IP and Dst\_IP before the normalization step. For the efficient training of neural networks, the numeric input data should be transformed by performing some pre-processing known as data normalization. It is used where inputs are widely divergent. Without such a process, networks would take a long time to train. Different schemes can be used to normalize the input data before it is fed to the input layer of neural network. We have used Z-score normalization to normalize the attributes of our dataset. Z-score normalization refers to the process of normalizing every value in a dataset such that the mean of all of the values is 0 and the standard deviation is 1. Mathematically,
 \begin{equation}
 New value = \frac{x- \mu}{\lambda}
 \end{equation}
 where $x: $ Original value,\\ $\mu: $ Mean of data,\\ $\lambda: $ Standard deviation of data.
 \subsection{Feature Extraction}
 \vspace{-18pt}
-Principal component analysis, or PCA, is a statistical procedure that allows you to summarize the information content in large data tables by means of a smaller set of  “summary indices” that can be more easily visualized and analyzed.
-Algorithm for PCA is given as:
+Random Forest Classifier, or RFC, is an ensemble learning method that creates a forest of decision trees, where each tree is trained on a random subset of the data, and a random subset of the features. It provides a feature importance score based on how much each feature reduces impurity across all decision trees in the forest. Recursive Feature Elimination, or RFE is a feature selection technique that recursively fits a model and removes the least important features until the desired number of features is reached. It works by repeatedly training the model, ranking the features based on their importance, and removing the least important features. It is particularly useful when the number of features is large, as it helps to reduce the complexity of the model and improves its interpretability.
+Algorithm for RFC with RFE is given as:
 \begin{enumerate}[label=\roman*.]
-\item $\mu = \frac{1}{p} \sum_{k=1}^{p} x_{k},$ where, $x_{k}$ is a pattern, $p =$ number of patterns, $x$ is the feature matrix.
-\item Find the covariance matrix\\
-$ C = \frac{1}{p} \sum_{k=1}^{p}(x_{k} - \mu)(x_{k} - \mu)^{T}$ where T represents matrix transposition.
-\item Compute Eigen values $\lambda_{i}$ and Eigen vectors $v_{i}$ of covariance matrix\\
-$Cv_{i} = \lambda_{i}v_{i}$\quad \quad \quad \quad$ (i = 1,2,3...q), q =$ number of features
-\item Estimating high-valued Eigen vectors
-\begin{enumerate}
-\item Arrange all the Eigen values $(\lambda_{i})$ in descending order.
-\item Choose a threshold value, $\theta$
-\item Number of high-valued $\lambda_{i}$ can be chosen so as to satisfy the relationship\\
-$(\sum_{i=1}^{s}\lambda_{i})(\sum_{i=1}^{q}\lambda_{i})^{-1} \geq \theta,$ where $s = $ number of high valued $\lambda_{i}$ chosen 
-\item Select Eigen vectors corresponding to selected high valued $\lambda_{i}$
-\end{enumerate}
-\item Extract low dimensional feature vectors (principal components) from raw feature matrix.\\
-$P = V^{T}x$, where $V$ is the matrix of principal components and $x$ is the feature matrix.
+\item Initialise the Random Forest Classifier with the required number of trees.
+\item Use RFE for feature selection taking parameters like RFC as the base estimator and number of features to select.
+\item Fit RFE to the training datasets.
+\item Get the boolean masks of the selected features from RFE
+\item Extract the names of the selected features.
+\item Create a new data frame containing the selected features.
 \end{enumerate}
 \subsection{Train and test the model}
 \vspace{-18pt}
-The model used in this project for NIDS is: Long Shortterm Memory (LSTM).
+The model used in this project for NIDS is: Long Short-Term Memory (LSTM).
 \par 
-\subsubsection{Long Short term Memory (LSTM)}
+\subsubsection{Long Short-Term Memory (LSTM)}
 \vspace{-18pt}
-LSTM is a popular deep learning technique in RNN for time series prediction. While standard RNNs outperform traditional networks in preserving information, they are not very effective in learning long term dependencies due to the vanishing gradient problem. An LSTM is well-suited to classify and/or predict time-series data. There are several architectures of LSTM units. A common architecture is composed of a memory cell, an input gate, an output gate and a forget gate. The mathematical formulation of the LSTM cell is given below:
-\begin{eqnarray}
-f_t = \sigma(x_tW_f + H_{t-1}U_f)\\
-o_t = \sigma(x_tW_o + H_{t-1}U_o)\\
-S_t = \sigma(S_{t-1} *f_t + i_t * H^{'}_t)\\
-i_t = \sigma(x_tW_i + H_{t-1}U_i)\\
-H^{'}_t = tanh(x_tW_g + H_{t-1}U_g)\\
-H_t = tanh(S_t)*o_t
-\end{eqnarray}
-\begin{figure}[tbh] % tbh means top, bottom or here (priority: left to right)
-\begin{center}
-	%\includegraphics[width = 3in]{images/logo.png}
-	\includegraphics[width=6in]{images/l1.png} 
-	\caption{LSTM} %figure name
-	\label{LSTM} % for referencing
-\end{center}
+\begin{figure}[tbh]
+	\begin{center}
+		\includegraphics[width=3in]{images/lstm_model.png}
+		\caption{LSTM model}
+		\label{LSTM model}
+	\end{center}
 \end{figure}
 \newpage
+The block diagram shows the layers used in the LSTM model.
+\begin{enumerate}[label=\roman*.]
+	\item LSTM layer: This is the core layer of the model. It is responsible for learning long-term dependencies in the input data. It consists of cells that store information and gates that control the flow of information into and out of the cells.
+	\item Dropout layer: This layer is a regularization technique used to prevent the model from overfitting on the training data.
+	\item Dense layer: This is the layer responsible for mapping the output of the LSTM layers to a final output. 
+\end{enumerate}
 \subsection{Evaluation Metrics}
 \vspace{-18pt}
 The most important performance indicator (Accuracy, AC) of intrusion detection is used to measure the performance of the model. In addition to the accuracy, we introduce the detection rate and false positive rate. The True Positive (TP) is equivalent to those correctly rejected, and it denotes the number of anomaly records that are identified as anomaly. The False Positive (FP) is the equivalent of incorrectly rejected, and it denotes the number of normal records that are identified as anomaly. The True Negative (TN) is equivalent to those correctly admitted, and it denotes the number of normal records that are identified as normal. The False Negative (FN) is equivalent to those incorrectly admitted, and it denotes the number of anomaly records that are identified as normal.
@@ -327,13 +356,17 @@ Precision is the number of actual attacks as a proportion of the number classifi
 \begin{equation}
 Precision = \frac{TP}{TP + FP} 
 \end{equation}
-True Positive Rate shows the percentage of the number of records identified correctly over the total number of anomaly records.
+True Positive Rate or Recall shows the percentage of the number of records identified correctly over the total number of anomaly records.
 \begin{equation}
-True Positive Rate = \frac{TP}{FN + TP}
+True Positive Rate/ Recall = \frac{TP}{FN + TP}
 \end{equation}
 False Positive Rate is the percentage of the number of records rejected incorrectly is divided by the total number of normal records.
 \begin{equation}
 False Positive Rate = \frac{FP}{FP + TN}
+\end{equation}
+The F1 Score is the weighted average of Precision and Recall. Therefore, this score takes both false positives and false negatives into account.
+\begin{equation}
+	F1 Score = \frac{2 * Precision * Recall}{Precision + Recall}
 \end{equation}
 \section{System Diagram}
 \vspace{-18pt}
@@ -349,15 +382,22 @@ False Positive Rate = \frac{FP}{FP + TN}
 \newpage
 \subsection{Software Development Model}
 \vspace{-18pt}
- \begin{figure}[tbh] % tbh means top, bottom or here (priority: left to right)
-\begin{center}
-	%\includegraphics[width = 3in]{images/logo.png}
-	\includegraphics[width=6in]{images/sdlc1.png} 
-	\caption{Incremental Model} %figure name
-	\label{Incremental Model} % for referencing
-\end{center}
-\end{figure}
 Incremental model is a method of software engineering that combines the elements of waterfall model in iterative manner. It involves both development and maintenance. In this model requirements are broken down into multiple modules. Incremental development is done in steps from analysis design, implementation, testing/verification, maintenance. Each iteration passes through the requirements, design, coding and testing phases. The first increment is often a core product where the necessary requirements are addressed, and the extra features are added in the next increments. The core product is delivered to the client. Once the core product is analyzed by the client, there is plan development for the next increment.
+
+\begin{figure}[tbh] % tbh means top, bottom or here (priority: left to right)
+	\begin{center}
+		%\includegraphics[width = 3in]{images/logo.png}
+		\includegraphics[width=6in]{images/sdlc1.png} 
+		\caption{Incremental Model} %figure name
+		\label{Incremental Model} % for referencing
+	\end{center}
+\end{figure}
+\newpage
+\begin{itemize}
+	\item First build: The feature extraction process was done where features were reduced from 81 to 25 and demo model was built.
+	\item Second build: The model was optimized and validated through test data.
+	\item Third build: The model was tested with real world traffic and integrated with SDN.
+\end{itemize}
 \chapter{Results and Discussion}
 \vspace{-18pt}
 \section{Result}
@@ -400,22 +440,52 @@ We have completed the development of the project along with obtaining the desira
 In the above figures, 0 denotes DDoS class, 1 denotes Normal class and Probe class is denoted by 2. As we can see, the model achieved 91\% accuracy for prediction of the labels in the validation set.
 \section{Discussion}
 \vspace{-18pt}
-bla bla bla
+The project takes in various parameters and then provides the user with the most probable label for the respective inputs. Before training the model, we loaded the required datasets and performed necessary preprocessing steps. The feature extraction was done via Random Forest Classifier where we selected the top 25 features from the dataset. For training the LSTM model, we first reshaped the input shapes to pass it as an input to the model. We label encoded the values in the Label columns and then again to one-hot encoded format. The loss plot that we have calculated on the training and test dataset is to determine the model's training efficiency. The LSTM model that we designed takes in the parameters and trains upto the required number of epochs. 
+\begin{figure}[tbhh]
+	\begin{center}
+		%\includegraphics[width = 3in]{images/logo.png}
+		\includegraphics[width=4in]{images/lstm_multi_loss.png} 
+		\caption{Loss plot for train and test dataset} %figure name
+		\label{Loss plot for train and test dataset} % for referencing
+	\end{center}
+\end{figure}
 \section{Limitations}
-\begin{enumerate}
-	\item hmmm
-	\item mmmm
+\begin{enumerate}[label=\roman*.]
+	\item Our system can only detect DDoS, Normal and Probe traffics.
+	\item Our system is only 91\% accurate for real world traffic.
 \end{enumerate}
 \chapter{Conclusion and Future Enhancements}
 \vspace{-18pt}
 \section{Conclusion}
 \vspace{-18pt}
-blablablabla
+We have developed a Network Intrusion Detection System which is capable of detecting 91\% of attacks in a computer network. The features were reduced from original 81 features to 25 features  by using Random Forest Algorithm. We used the InSDN dataset for our assessments and obtained promising results.
 \section{Future Enhancements}
-\begin{enumerate}
-	\item bla bla
-	\item bla bla
-\end{enumerate}
+\vspace{-18pt}
+Additional dataset containing more variety of attacks can be added and used to train the model to increase the accuracy as well as to detect more variety of attacks.
+\chapter{Annex}
+%conf mat,
+\begin{figure}[tbh] % tbh means top, bottom or here (priority: left to right)
+	\begin{center}
+		%\includegraphics[width = 3in]{images/logo.png}
+		\includegraphics[width=4in]{images/labelsBefore.png} 
+		\caption{Initial Labels in the dataset} %figure name
+		\label{Initial Labels in the dataset} 
+	\end{center}
+\end{figure}
+\begin{figure}[tbh]
+	\begin{center}
+		\includegraphics[width=4in]{images/labelsAfter.png}
+		\caption{Final labels used for the project }
+		\label{Final labels used for the project}
+	\end{center}
+\end{figure}
+\begin{figure}[tbh]
+	\begin{center}
+		\includegraphics[width=4in]{images/topF.png}
+		\caption{Top 25 features selected from the dataset }
+		\label{Top 25 features selected from the dataset}
+	\end{center}
+\end{figure}
 %Reference
 \renewcommand\bibname{References} % Change heading to References
 \bibliographystyle{IEEEtran} % to use IEEE Format for referencing

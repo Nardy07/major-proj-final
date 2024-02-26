@@ -4,15 +4,21 @@
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Gantt Chart\relax }}{5}{figure.caption.7}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Working mechanism of Network Intrusion Detection System\relax }}{9}{figure.caption.8}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Features of InSDN dataset\relax }}{10}{figure.caption.9}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces LSTM\relax }}{13}{figure.caption.10}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Confusion Matrix\relax }}{14}{figure.caption.11}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Use case Diagram of Network Intrusion Detection System\relax }}{15}{figure.caption.12}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Incremental Model\relax }}{16}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces LSTM\relax }}{10}{figure.caption.8}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Working mechanism of Network Intrusion Detection System\relax }}{12}{figure.caption.9}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Features of InSDN dataset\relax }}{13}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces LSTM model\relax }}{15}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Confusion Matrix\relax }}{16}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Use case Diagram of Network Intrusion Detection System\relax }}{18}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Incremental Model\relax }}{19}{figure.caption.14}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Classification Report for Test dataset\relax }}{17}{figure.caption.14}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Confusion Matrix for Test dataset\relax }}{17}{figure.caption.15}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Confusion Matrix for Validation dataset\relax }}{18}{figure.caption.16}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Classification Report for Validation dataset\relax }}{18}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Classification Report for Test dataset\relax }}{20}{figure.caption.15}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Confusion Matrix for Test dataset\relax }}{20}{figure.caption.16}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Confusion Matrix for Validation dataset\relax }}{21}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Classification Report for Validation dataset\relax }}{21}{figure.caption.18}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Loss plot for train and test dataset\relax }}{22}{figure.caption.19}%
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Initial Labels in the dataset\relax }}{24}{figure.caption.20}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Final labels used for the project \relax }}{24}{figure.caption.21}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Top 25 features selected from the dataset \relax }}{25}{figure.caption.22}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.12.5)  24 FEB 2024 22:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.12.5)  27 FEB 2024 01:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -506,7 +506,7 @@ nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
 or `english'. on input line 41.
-<images/logo.png, id=188, 102.3825pt x 102.3825pt>
+<images/logo.png, id=221, 102.3825pt x 102.3825pt>
 File: images/logo.png Graphic file (type png)
 <use images/logo.png>
 Package pdftex.def Info: images/logo.png  used on input line 43.
@@ -556,137 +556,168 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.124 \par
+l.126 \par
            [1
 
 ] [2]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
-43.
+45.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 [3]
-Overfull \hbox (3.73866pt too wide) in paragraph at lines 191--193
+Overfull \hbox (3.73866pt too wide) in paragraph at lines 193--195
 \OT1/ptm/m/n/12 The tech-ni-cal fea-si-bil-ity as-sess-ment is fo-cused on gain
 -ing in un-der-stand-ing of the present
  []
 
 [4]
-<images/real_n.png, id=323, 1796.7125pt x 244.915pt>
-File: images/real_n.png Graphic file (type png)
-<use images/real_n.png>
-Package pdftex.def Info: images/real_n.png  used on input line 206.
-(pdftex.def)             Requested size: 433.60497pt x 144.54343pt.
+<images/gantt26.png, id=372, 1464.47125pt x 244.915pt>
+File: images/gantt26.png Graphic file (type png)
+<use images/gantt26.png>
+Package pdftex.def Info: images/gantt26.png  used on input line 208.
+(pdftex.def)             Requested size: 433.62419pt x 144.54343pt.
 
-Overfull \hbox (16.77208pt too wide) in paragraph at lines 205--207
+Overfull \hbox (16.7913pt too wide) in paragraph at lines 207--209
  [] 
  []
 
-[5 <./images/real_n.png>]
+[5 <./images/gantt26.png>]
 Chapter 2.
 [6
 
 ] [7] [8]
 Chapter 3.
-<images/ww1.jpg, id=349, 341.275pt x 1121.18875pt>
-File: images/ww1.jpg Graphic file (type jpg)
-<use images/ww1.jpg>
-Package pdftex.def Info: images/ww1.jpg  used on input line 243.
-(pdftex.def)             Requested size: 144.54pt x 474.86511pt.
-[9
-
- <./images/ww1.jpg>]
-<images/ds2.png, id=355, 446.66875pt x 700.6175pt>
-File: images/ds2.png Graphic file (type png)
-<use images/ds2.png>
-Package pdftex.def Info: images/ds2.png  used on input line 255.
-(pdftex.def)             Requested size: 216.81pt x 340.07703pt.
- [10 <./images/ds2.png>] [11]
-<images/l1.png, id=379, 1007.765pt x 578.16pt>
+<images/l1.png, id=398, 1007.765pt x 578.16pt>
 File: images/l1.png Graphic file (type png)
 <use images/l1.png>
-Package pdftex.def Info: images/l1.png  used on input line 306.
+Package pdftex.def Info: images/l1.png  used on input line 253.
 (pdftex.def)             Requested size: 433.62pt x 248.77156pt.
 
-Overfull \hbox (16.78711pt too wide) in paragraph at lines 306--307
+Overfull \hbox (16.78711pt too wide) in paragraph at lines 253--254
  [] 
  []
 
-[12]
-<images/confMat.png, id=390, 1353.055pt x 603.25375pt>
+[9
+
+] [10 <./images/l1.png>] [11]
+<images/ww1.jpg, id=422, 341.275pt x 1121.18875pt>
+File: images/ww1.jpg Graphic file (type jpg)
+<use images/ww1.jpg>
+Package pdftex.def Info: images/ww1.jpg  used on input line 285.
+(pdftex.def)             Requested size: 144.54pt x 474.86511pt.
+<images/ds2.png, id=424, 446.66875pt x 700.6175pt>
+File: images/ds2.png Graphic file (type png)
+<use images/ds2.png>
+Package pdftex.def Info: images/ds2.png  used on input line 297.
+(pdftex.def)             Requested size: 216.81pt x 340.07703pt.
+ [12 <./images/ww1.jpg>] [13 <./images/ds2.png>] [14]
+<images/lstm_model.png, id=442, 320.19624pt x 629.35126pt>
+File: images/lstm_model.png Graphic file (type png)
+<use images/lstm_model.png>
+Package pdftex.def Info: images/lstm_model.png  used on input line 329.
+(pdftex.def)             Requested size: 216.81pt x 426.14781pt.
+ [15 <./images/lstm_model.png>]
+<images/confMat.png, id=453, 1353.055pt x 603.25375pt>
 File: images/confMat.png Graphic file (type png)
 <use images/confMat.png>
-Package pdftex.def Info: images/confMat.png  used on input line 318.
+Package pdftex.def Info: images/confMat.png  used on input line 347.
 (pdftex.def)             Requested size: 433.62pt x 193.33049pt.
 
-Overfull \hbox (16.78711pt too wide) in paragraph at lines 318--319
+Overfull \hbox (16.78711pt too wide) in paragraph at lines 347--348
  [] 
  []
 
-[13 <./images/l1.png>]
-<images/use.jpg, id=398, 1311.90125pt x 1294.8375pt>
+[16 <./images/confMat.png>]
+<images/use.jpg, id=462, 1311.90125pt x 1294.8375pt>
 File: images/use.jpg Graphic file (type jpg)
 <use images/use.jpg>
-Package pdftex.def Info: images/use.jpg  used on input line 344.
+Package pdftex.def Info: images/use.jpg  used on input line 377.
 (pdftex.def)             Requested size: 361.34999pt x 356.6445pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[14 <./images/confMat.png>]
-<images/sdlc1.png, id=406, 790.955pt x 524.96124pt>
+[17]
+<images/sdlc1.png, id=473, 790.955pt x 524.96124pt>
 File: images/sdlc1.png Graphic file (type png)
 <use images/sdlc1.png>
-Package pdftex.def Info: images/sdlc1.png  used on input line 355.
+Package pdftex.def Info: images/sdlc1.png  used on input line 390.
 (pdftex.def)             Requested size: 433.62pt x 287.80038pt.
 
-Overfull \hbox (16.78711pt too wide) in paragraph at lines 355--356
+Overfull \hbox (16.78711pt too wide) in paragraph at lines 390--391
  [] 
  []
 
-[15 <./images/use.jpg>] [16 <./images/sdlc1.png>]
+[18 <./images/use.jpg>] [19 <./images/sdlc1.png>]
 Chapter 4.
-<images/cReportTest.png, id=415, 1002.74625pt x 410.53375pt>
+<images/cReportTest.png, id=482, 1002.74625pt x 410.53375pt>
 File: images/cReportTest.png Graphic file (type png)
 <use images/cReportTest.png>
-Package pdftex.def Info: images/cReportTest.png  used on input line 370.
+Package pdftex.def Info: images/cReportTest.png  used on input line 410.
 (pdftex.def)             Requested size: 216.81pt x 88.76418pt.
-<images/confMatTest.png, id=416, 414.1071pt x 353.4003pt>
+<images/confMatTest.png, id=483, 414.1071pt x 353.4003pt>
 File: images/confMatTest.png Graphic file (type png)
 <use images/confMatTest.png>
-Package pdftex.def Info: images/confMatTest.png  used on input line 378.
+Package pdftex.def Info: images/confMatTest.png  used on input line 418.
 (pdftex.def)             Requested size: 289.07999pt x 246.70445pt.
-<images/confMatVal.png, id=417, 1162.3425pt x 961.5925pt>
+<images/confMatVal.png, id=484, 1162.3425pt x 961.5925pt>
 File: images/confMatVal.png Graphic file (type png)
 <use images/confMatVal.png>
-Package pdftex.def Info: images/confMatVal.png  used on input line 386.
+Package pdftex.def Info: images/confMatVal.png  used on input line 426.
 (pdftex.def)             Requested size: 289.07999pt x 239.15034pt.
-<images/cReportVal.png, id=418, 871.255pt x 348.30125pt>
+<images/cReportVal.png, id=485, 871.255pt x 348.30125pt>
 File: images/cReportVal.png Graphic file (type png)
 <use images/cReportVal.png>
-Package pdftex.def Info: images/cReportVal.png  used on input line 394.
+Package pdftex.def Info: images/cReportVal.png  used on input line 434.
 (pdftex.def)             Requested size: 216.81pt x 86.67117pt.
-[17
+[20
 
- <./images/cReportTest.png> <./images/confMatTest.png>] [18 <./images/confMatVa
-l.png> <./images/cReportVal.png>]
+ <./images/cReportTest.png> <./images/confMatTest.png>]
+<images/lstm_multi_loss.png, id=492, 462.528pt x 346.896pt>
+File: images/lstm_multi_loss.png Graphic file (type png)
+<use images/lstm_multi_loss.png>
+Package pdftex.def Info: images/lstm_multi_loss.png  used on input line 447.
+(pdftex.def)             Requested size: 289.07999pt x 216.82004pt.
+ [21 <./images/confMatVal.png> <./images/cReportVal.png>] [22 <./images/lstm_mu
+lti_loss.png>]
 Chapter 5.
-(./KECReport.bbl [19
+[23
 
-]) [20
+]
+Chapter 6.
+<images/labelsBefore.png, id=511, 1218.5525pt x 926.46124pt>
+File: images/labelsBefore.png Graphic file (type png)
+<use images/labelsBefore.png>
+Package pdftex.def Info: images/labelsBefore.png  used on input line 470.
+(pdftex.def)             Requested size: 289.07999pt x 219.78236pt.
+<images/labelsAfter.png, id=512, 1218.5525pt x 926.46124pt>
+File: images/labelsAfter.png Graphic file (type png)
+<use images/labelsAfter.png>
+Package pdftex.def Info: images/labelsAfter.png  used on input line 477.
+(pdftex.def)             Requested size: 289.07999pt x 219.78236pt.
+<images/topF.png, id=513, 417.56pt x 917.4275pt>
+File: images/topF.png Graphic file (type png)
+<use images/topF.png>
+Package pdftex.def Info: images/topF.png  used on input line 484.
+(pdftex.def)             Requested size: 289.07999pt x 635.18149pt.
+(./KECReport.bbl [24
+
+ <./images/labelsBefore.png> <./images/labelsAfter.png>]
+[25 <./images/topF.png>]) [26
 
 ] (./KECReport.aux)
 Package rerunfilecheck Info: File `KECReport.out' has not changed.
-(rerunfilecheck)             Checksum: 9A79A4E0BAC18C82E98482A95147BF41;6607.
+(rerunfilecheck)             Checksum: 6F44DDAE0746B4542883B9FC78D30B3B;7804.
  ) 
 Here is how much of TeX's memory you used:
- 16249 strings out of 478287
- 300824 string characters out of 5849289
- 587205 words of memory out of 5000000
- 34122 multiletter control sequences out of 15000+600000
- 490207 words of font info for 68 fonts, out of 8000000 for 9000
+ 16317 strings out of 478287
+ 302288 string characters out of 5849289
+ 587615 words of memory out of 5000000
+ 34166 multiletter control sequences out of 15000+600000
+ 490213 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,82p,1523b,625s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 75i,11n,82p,1523b,509s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist
@@ -699,10 +730,10 @@ y8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/times/utmri8a.pfb>
-Output written on KECReport.pdf (28 pages, 716591 bytes).
+Output written on KECReport.pdf (34 pages, 945200 bytes).
 PDF statistics:
- 524 PDF objects out of 1000 (max. 8388607)
- 444 compressed objects within 5 object streams
- 112 named destinations out of 1000 (max. 500000)
- 429 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 613 PDF objects out of 1000 (max. 8388607)
+ 516 compressed objects within 6 object streams
+ 131 named destinations out of 1000 (max. 500000)
+ 518 words of extra memory for PDF output out of 10000 (max. 10000000)
 
