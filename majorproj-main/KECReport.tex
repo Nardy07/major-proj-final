@@ -19,8 +19,8 @@
 \newcommand{\submittedTo}{Department of Computer and Electronics Engineering} %specify your department
 \newcommand{\hod}{Er. Rabindra Khati} %specify Head ot the department
 \newcommand{\defYear}{2024} %Defense Year
-\newcommand{\defMonth}{February} %Defense Month- January, February, ...
-\newcommand{\defDay}{27} %specify Defense Day- 1, 2, ...
+\newcommand{\defMonth}{March} %Defense Month- January, February, ...
+\newcommand{\defDay}{4} %specify Defense Day- 1, 2, ...
 
 \newif\ifhassupervisor
 \hassupervisortrue % to display supervisor name use command- \hassupervisortrue
@@ -88,8 +88,8 @@ Finally we would like to thank our family and friends for all the support and en
 \tableofcontents % prints table of contents
 \listoffigures % prints list of figures
 \addcontentsline{toc}{chapter}{List of Figures}
-%\listoftables % prints list of table
-%\addcontentsline{toc}{chapter}{List of Tables}
+\listoftables % prints list of table
+\addcontentsline{toc}{chapter}{List of Tables}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter*{List of Abbreviations}
@@ -120,10 +120,10 @@ Finally we would like to thank our family and friends for all the support and en
 \section{Background}\label{sec:bkgrnd}%label your section if you require to refer them somewhere else in your document.
 \vspace{-18pt}
 %nw3
-With the increasingly deep integration of the Internet and society, the Internet is changing the way in which people live, study and work, but the various security threats that we face are becoming more and more serious. How to identify various network attacks, especially unforeseen attacks, is an unavoidable key technical issue. An Intrusion Detection System (IDS), a significant research achievement in the information security field, can identify an invasion, which could be an ongoing invasion or an intrusion that has already occurred. In fact, intrusion detection is usually equivalent to a classification problem, such as a binary or a multi class classification problem, i.e., identifying whether network traffic behavior is normal or anomalous, or a five-category classification problem, i.e., identifying whether it is normal or any one of the other four attack types: Denial of Service (DOS), User to Root (U2R), Probe (Probing) and Root to Local (R2L). In short, the main motivation of intrusion detection is to improve the accuracy of classifiers in effectively identifying the intrusive behavior.\par
+With the increasingly deep integration of the Internet and society, the Internet is changing the way in which people live, study and work, but the various security threats that we face are becoming more and more serious. How to identify various network attacks, especially unforeseen attacks, is an unavoidable key technical issue. An Intrusion Detection System, a significant research achievement in the information security field, can identify an invasion, which could be an ongoing invasion or an intrusion that has already occurred. In fact, intrusion detection is usually equivalent to a classification problem, such as a binary or a multi class classification problem, i.e., identifying whether network traffic behavior is normal or anomalous, or a five-category classification problem, i.e., identifying whether it is normal or any one of the other four attack types: DOS, U2R, Probe (Probing) and Root to Local. In short, the main motivation of intrusion detection is to improve the accuracy of classifiers in effectively identifying the intrusive behavior.\par
 Machine learning methodologies have been widely used in identifying various types of attacks, and a machine learning approach can help the network administrator take the corresponding measures for preventing intrusions. However, most of the traditional machine learning methodologies belong to shallow learning and often emphasize feature engineering and selection; they cannot effectively solve the massive intrusion data classification problem that arises in the face of a real network application environment. With the dynamic growth of data sets, multiple classification tasks will lead to decreased accuracy. In addition, shallow learning is unsuited to intelligent analysis and the forecasting requirements of high-dimensional learning with massive data. In contrast, deep learners have the potential to extract better representations from the data to create much better models. As a result, intrusion detection technology has experienced rapid development after falling into a relatively slow period\cite{yin2017deep}.%chinese
 \par
-A well-known method of securing the network is through implementing an Intrusion Detection System (IDS). IDS was originally implemented in 1980. The main aim of their work was to introduce a mechanism which differentiates between benign activities from malicious ones. Further research was carried out to optimizing this methodology to aid monitoring the network traffic in case of attacks, this system is now known as Network Intrusion Detection System (NIDS) . In NIDS, the detection system is inspecting the incoming and outgoing network traffic from all hosts in real time and based on certain criteria, it can detect and identify the attack, then, take the suitable security measures to stop or block it, which significantly reduces the risk of damage to the network. However, due to the rapid increase in the complexity of the cyber-security attacks, the current methods used in NIDS are failing to sufficiently address this issue\cite{al2020using}.
+A well-known method of securing the network is through implementing an Intrusion Detection System. IDS was originally implemented in 1980. The main aim of their work was to introduce a mechanism which differentiates between benign activities from malicious ones. Further research was carried out to optimizing this methodology to aid monitoring the network traffic in case of attacks, this system is now known as Network Intrusion Detection System. In NIDS, the detection system is inspecting the incoming and outgoing network traffic from all hosts in real time and based on certain criteria, it can detect and identify the attack, then, take the suitable security measures to stop or block it, which significantly reduces the risk of damage to the network. However, due to the rapid increase in the complexity of the cyber-security attacks, the current methods used in NIDS are failing to sufficiently address this issue\cite{al2020using}.
 \par 
 IDSs can be divided into two categories according to the main detection technology: misuse detection and anomaly detection. Misuse detection is a knowledge-based detection technology. A misuse detection system needs to clearly define the features of the intrusion, then identify the intrusion by matching the rules. Misuse detection can achieve a high accuracy and low false alarm rate. However, it needs to build a feature library and cannot detect unknown attacks. In contrast, anomaly detection is a behavior-based detection technology. First, it needs to define the normal activities of a network, and then check whether the actual behavior has deviated from the normal activities. Anomaly detection needs only to define a normal state of a specific network, without prior knowledge of intrusion. Thus, it can detect unknown attacks, although there may be a high false alarm rate. At present, network structure is becoming more and more complicated, and intrusion methods are following the trend of diversification and complication, creating more challenges for IDSs.\par 
 The recurrent neural network (RNN) has failed to become a mainstream network model in the past few years due to difficulties in training and computational complexity. In recent years, with the development of deep learning theory, RNN began to enter a rapid development period. Currently, RNN has already been applied successfully to handwriting and speech recognition. The main feature of RNN is that it circulates information in a hidden layer which can remember information processed previously, leading to a structural advantage for the processing of time series information. Correspondingly, many intrusion behaviors can be abstracted as specific time series of events from the underlying network. So, RNN is considered suitable for building an IDS\cite{xu2018intrusion}.
@@ -136,7 +136,7 @@ The existing Network Intrusion Detection Systems face challenges in accurately a
 The primary objective of this project:
 \vspace{-18pt}
 \begin{enumerate}[label=\roman*.]
-\item To develop a robust and accurate system that can effectively detect and notify network intrusions or malicious activities within a computer network.
+\item To develop a robust and accurate system that can effectively detect network intrusions within a computer network.
 \end{enumerate}
 \section{Project Features}
 \vspace{-18pt}
@@ -144,12 +144,11 @@ The project will be able to accomplish following:
 \vspace{-18pt}
 \begin{itemize}
 \item Anomaly Detection
-\item Real-time Monitoring
 \item Traffic Preprocessing
 \end{itemize}
 \section{Application Scope}
 \vspace{-18pt}
-Network Intrusion Detection System has various applications in areas such as Enterprise networks, Internet Service Providers(ISPs), Cloud Computing environment, Government networks and so on. The application scope of network intrusion detection systems using deep neural networks extends beyond these areas, as network security is crucial in nearly every sector that relies on secure and reliable communication. By deploying these systems, organizations can proactively detect and respond to network intrusions, minimize the impact of attacks, and protect their assets, data, and operations from potential threats.
+Network Intrusion Detection System has various applications in areas such as Enterprise networks, Internet Service Providers, Cloud Computing environment, Government networks and so on. The application scope of network intrusion detection systems using deep neural networks extends beyond these areas, as network security is crucial in nearly every sector that relies on secure and reliable communication. By deploying these systems, organizations can proactively detect and respond to network intrusions, minimize the impact of attacks, and protect their assets, data, and operations from potential threats.
 \section{System Requirement}
 \vspace{-18pt}
 \subsection{Development Requirements}
@@ -206,7 +205,7 @@ The purpose of the economic feasibility assessment is to determine the positive 
 \begin{center}
 	%\includegraphics[width = 3in]{images/logo.png}
 	\includegraphics[width=6in,height=2in
-	]{images/gantt26.png} 
+	]{images/gn.png} 
 	\caption{Gantt Chart} %figure name
 	\label{figGanttChart} % for referencing
 \end{center}
@@ -217,37 +216,37 @@ The purpose of the economic feasibility assessment is to determine the positive 
 \vspace{-18pt}
 \subsection{Suricata}
 \vspace{-18pt}
-Suricata is a leading open-source network analysis and threat detection tool, widely recognized for its high performance and versatility across various platforms including Windows, Mac, Unix, and Linux. Developed by the Open Information Security Foundation (OSIF), Suricata is embraced by a broad spectrum of users from private and public sectors to major vendors seeking to bolster their cybersecurity defenses. Its utility spans enterprises of all sizes, offering a cost-effective solution for intricate security monitoring needs.\par 
+Suricata is a leading open-source network analysis and threat detection tool, widely recognized for its high performance and versatility across various platforms including Windows, Mac, Unix, and Linux. Developed by the Open Information Security Foundation, Suricata is embraced by a broad spectrum of users from private and public sectors to major vendors seeking to bolster their cybersecurity defenses. Its utility spans enterprises of all sizes, offering a cost-effective solution for intricate security monitoring needs.\par 
 Distinguished by its dual functionality, Suricata serves not only as an intrusion detection system (IDS) that identifies and alerts on potential threats but also as an intrusion prevention system (IPS) with capabilities to actively intervene and mitigate identified threats by blocking malicious traffic. This dual capability sets Suricata apart in the cybersecurity domain, enabling comprehensive protection against a wide array of cyber threats.\par 
 One of the core strengths of Suricata lies in its sophisticated rule set and signature language, which allows for precise threat detection and prevention strategies. Additionally, its proficiency in deep packet inspection (DPI) further enhances its effectiveness, making it an ideal solution for a variety of security monitoring initiatives. Whether it's for detecting subtle anomalies or preventing advanced cyber attacks, Suricata's robust feature set ensures that organizations can safeguard their digital assets effectively. As a result, Suricata stands out as a versatile and powerful tool in the arsenal of cybersecurity professionals, offering a free yet invaluable resource for securing network environments against the ever-evolving landscape of cyber threats.
 \subsection{Snort}
 \vspace{-18pt}
-Snort stands as the premier Open Source Intrusion Prevention System (IPS) globally, renowned for its versatility and comprehensive security capabilities. At its core, Snort operates by implementing a robust set of rules designed to identify and define malicious network activities. These rules are crucial for detecting packets that exhibit patterns or behaviors indicative of cyber threats, triggering alerts for users to take action. Moreover, Snort's functionality extends beyond mere detection; it can be configured to operate inline, actively intercepting and blocking malicious packets before they infiltrate the network.\par 
+Snort stands as the premier Open Source Intrusion Prevention System globally, renowned for its versatility and comprehensive security capabilities. At its core, Snort operates by implementing a robust set of rules designed to identify and define malicious network activities. These rules are crucial for detecting packets that exhibit patterns or behaviors indicative of cyber threats, triggering alerts for users to take action. Moreover, Snort's functionality extends beyond mere detection; it can be configured to operate inline, actively intercepting and blocking malicious packets before they infiltrate the network.\par 
 Snort's flexibility allows it to serve multiple roles within the cybersecurity framework. It can function as a packet sniffer, akin to tcpdump, offering detailed insights into network traffic for analysis and troubleshooting purposes. Additionally, it serves as an effective packet logger, providing a valuable tool for network traffic debugging by recording data packets traversing the network. Most prominently, Snort excels as a full-fledged network intrusion prevention system, offering robust protection against a wide array of cyber threats.\par 
 Available for both personal and business use, Snort can be easily downloaded and configured to suit various security needs. Its open-source nature not only facilitates widespread access but also encourages continuous improvement and updates from a global community of developers and cybersecurity experts. This collaborative approach ensures that Snort remains at the forefront of intrusion prevention technology, providing an essential layer of defense for networks around the world against the ever-evolving landscape of cyber threats.
 \vspace{-10pt}
 \section{Related Works}
 \vspace{-18pt}
-The paper titled "A Deep Learning Approach for Intrusion Detection Using Recurrent Neural Networks" introduces a cutting-edge approach to enhancing the efficacy of Intrusion Detection Systems (IDS) through the implementation of Recurrent Neural Networks (RNN-IDS). This innovative methodology diverges from traditional machine learning classification techniques by leveraging the dynamic and temporal processing capabilities inherent in RNNs, which are particularly adept at handling sequence data, thus making them an ideal choice for analyzing network traffic and detecting anomalous patterns indicative of cyber threats.\par
+The paper titled "A Deep Learning Approach for Intrusion Detection Using Recurrent Neural Networks" introduces a cutting-edge approach to enhancing the efficacy of Intrusion Detection Systems through the implementation of Recurrent Neural Networks. This innovative methodology diverges from traditional machine learning classification techniques by leveraging the dynamic and temporal processing capabilities inherent in RNNs, which are particularly adept at handling sequence data, thus making them an ideal choice for analyzing network traffic and detecting anomalous patterns indicative of cyber threats.\par
 The core of this research revolves around the comparative analysis between RNN-IDS and conventional machine learning methods across both binary and multiclass classification scenarios. The comparison aimed to rigorously evaluate the performance of the deep learning-based model in terms of its accuracy in detecting intrusions within network systems. Notably, the findings from this study illuminated the superior performance of the RNN-IDS model, demonstrating a significant improvement in detection accuracy over its traditional counterparts.\par 
 This improvement is attributed to the RNN-IDS model's ability to capture and learn from the temporal dependencies present in network traffic data, a critical aspect that traditional machine learning models often overlook. By effectively utilizing the sequential information within the data, RNN-IDS can offer a more nuanced and comprehensive analysis of potential security threats, leading to a higher accuracy rate in intrusion detection.\par 
 Moreover, the success of the RNN-IDS model in outperforming established machine learning techniques not only validates the potential of deep learning approaches in the realm of cyber-security but also paves the way for further research into the development of more sophisticated and effective intrusion detection systems. The study concludes by highlighting the RNN-IDS model as a novel and promising research method, capable of significantly enhancing the accuracy and reliability of intrusion detection efforts, thereby contributing to the advancement of security measures in the face of evolving cyber threats\cite{yin2017deep}.
 \par 
-The study "Using Deep Learning Techniques for Network Intrusion Detection" delves into the development of an advanced intrusion detection system leveraging the strengths of both Convolutional Neural Networks (CNN) and Recurrent Neural Networks (RNN). This innovative approach aimed to harness the unique capabilities of these deep learning models to enhance the detection of various network intrusions, a critical aspect of maintaining cybersecurity in the digital age. The evaluation of this intelligent detection system was conducted through a comprehensive analysis utilizing a range of performance metrics, including accuracy, F1 score, recall, and precision. These metrics served as the benchmarks to assess and compare the effectiveness of the employed learning techniques in identifying and classifying malicious activities within network traffic.\par
+The study "Using Deep Learning Techniques for Network Intrusion Detection" delves into the development of an advanced intrusion detection system leveraging the strengths of both Convolutional Neural Networks and Recurrent Neural Networks. This innovative approach aimed to harness the unique capabilities of these deep learning models to enhance the detection of various network intrusions, a critical aspect of maintaining cyber security in the digital age. The evaluation of this intelligent detection system was conducted through a comprehensive analysis utilizing a range of performance metrics, including accuracy, F1 score, recall, and precision. These metrics served as the benchmarks to assess and compare the effectiveness of the employed learning techniques in identifying and classifying malicious activities within network traffic.\par
 The comparative analysis revealed that CNNs emerged as the superior model, demonstrating exceptional performance across all evaluated metrics. This outcome underscores the effectiveness of CNNs in feature extraction and pattern recognition within complex datasets, attributes that are essential for the accurate detection of network intrusions. The CNN model's ability to outperform other techniques signifies its robustness and reliability as a tool for enhancing the security infrastructure against diverse cyber threats.\par 
 This finding not only highlights the potential of deep learning in revolutionizing network intrusion detection but also sets a precedent for future research in cybersecurity. By identifying CNN as the most effective model for intrusion detection, the study contributes valuable insights into the optimization of security systems, paving the way for the development of more resilient and intelligent cybersecurity solutions\cite{al2020using}.
 \par 
-The research paper titled "An Intrusion Detection System Using a Deep Neural Network With Gated Recurrent Units" introduces a groundbreaking approach to enhancing intrusion detection systems (IDS) through the application of deep learning theories, specifically focusing on the capabilities of Gated Recurrent Units (GRU). This innovative IDS model incorporates automatic feature extraction, utilizing a sophisticated combination of GRU, Multilayer Perceptron (MLP), and a softmax module to effectively analyze and detect time-related network intrusions. The proposed system's architecture leverages the sequential data processing strength of GRUs, a variant of recurrent neural networks, to capture dynamic changes in network traffic that may indicate malicious activities.\par 
-Through rigorous experimentation with relevant datasets, the study demonstrates the superior performance of the GRU-based IDS model over traditional methods. The research further compares GRU with Long Short-Term Memory (LSTM) units, another popular recurrent neural network variant. The findings clearly indicate that GRUs offer a more suitable memory mechanism for IDS applications than LSTMs, attributing this to GRUs' simplified yet highly efficient structure, which enhances its capability for pattern recognition in network security.\par 
+The research paper titled "An Intrusion Detection System Using a Deep Neural Network With Gated Recurrent Units" introduces a groundbreaking approach to enhancing intrusion detection systems through the application of deep learning theories, specifically focusing on the capabilities of Gated Recurrent Units. This innovative IDS model incorporates automatic feature extraction, utilizing a sophisticated combination of GRU, Multilayer Perceptron, and a softmax module to effectively analyze and detect time-related network intrusions. The proposed system's architecture leverages the sequential data processing strength of GRUs, a variant of recurrent neural networks, to capture dynamic changes in network traffic that may indicate malicious activities.\par 
+Through rigorous experimentation with relevant datasets, the study demonstrates the superior performance of the GRU-based IDS model over traditional methods. The research further compares GRU with Long Short-Term Memory units, another popular recurrent neural network variant. The findings clearly indicate that GRUs offer a more suitable memory mechanism for IDS applications than LSTMs, attributing this to GRUs' simplified yet highly efficient structure, which enhances its capability for pattern recognition in network security.\par 
 Significantly, the paper highlights the exceptional efficacy of bidirectional GRU configurations, which outperform other tested models. This suggests that the bidirectional approach maximizes the model's ability to understand and predict intrusion scenarios by analyzing data from both past and future contexts, providing a more comprehensive detection mechanism. The success of the GRU-based model marks a significant advancement in the field of cybersecurity, offering a potent tool for the development of more accurate, efficient, and reliable intrusion detection systems\cite{xu2018intrusion}.
 \par 
-The paper "A Flow-Based Anomaly Detection Approach With Feature Selection Method Against DDoS Attacks in SDNs" embarks on a comprehensive exploration of Distributed Denial of Service (DDoS) attack detection methodologies within Software-Defined Networking (SDN) environments. This scholarly work seeks to thoroughly examine the landscape of existing research in the realm of DDoS defense mechanisms, specifically tailored to the unique architectural nuances of SDNs. The primary objective is to unearth the existing knowledge gaps and underscore the imperative for continued investigative efforts in this critical area of cybersecurity.\par 
+The paper "A Flow-Based Anomaly Detection Approach With Feature Selection Method Against DDoS Attacks in SDNs" embarks on a comprehensive exploration of Distributed Denial of Service attack detection methodologies within Software-Defined Networking environments. This scholarly work seeks to thoroughly examine the landscape of existing research in the realm of DDoS defense mechanisms, specifically tailored to the unique architectural nuances of SDNs. The primary objective is to unearth the existing knowledge gaps and underscore the imperative for continued investigative efforts in this critical area of cybersecurity.\par 
 Central to this study is the establishment of a robust theoretical framework that underpins the proposed anomaly detection approach. By meticulously selecting relevant features that are indicative of DDoS attack patterns, the research endeavors to craft a sophisticated detection model that stands on the shoulders of its predecessors while pioneering new frontiers in attack mitigation strategies. This involves a detailed comparative analysis with prior models to not only validate the proposed method's efficacy but also to illuminate its contributions to advancing the state of the art in DDoS detection.\par 
 Furthermore, the document provides an insightful context that encapsulates the significance of the research undertakings, delineating the practical and theoretical implications of the findings. By articulating the relevance of the study, it aims to foster a deeper understanding among the academic and professional communities about the criticality of securing SDN infrastructures against the burgeoning threat of DDoS attacks. This comprehensive approach not only reinforces the need for innovative research in this domain but also sets the stage for future advancements that could revolutionize the way DDoS attacks are detected and mitigated in increasingly dynamic network environments\cite{9810168}.
 \par 
-The innovative research detailed in the paper "Securing IoT and SDN Systems Using Deep-Learning Based Automatic Intrusion Detection" presents the Secured Automatic Two-level Intrusion Detection System (SATIDS), a cutting-edge solution leveraging the advanced capabilities of Long Short-Term Memory (LSTM) networks for bolstering cybersecurity measures in Internet of Things (IoT) and Software-Defined Networking (SDN) infrastructures. This system represents a significant leap forward in the use of deep learning techniques for cyber defense, specifically employing LSTM networks known for their proficiency in handling sequential data and their ability to uncover complex patterns indicative of cyber threats.\par 
+The innovative research detailed in the paper "Securing IoT and SDN Systems Using Deep-Learning Based Automatic Intrusion Detection" presents the Secured Automatic Two-level Intrusion Detection System, a cutting-edge solution leveraging the advanced capabilities of Long Short-Term Memory networks for bolstering cybersecurity measures in Internet of Things and Software-Defined Networking infrastructures. This system represents a significant leap forward in the use of deep learning techniques for cyber defense, specifically employing LSTM networks known for their proficiency in handling sequential data and their ability to uncover complex patterns indicative of cyber threats.\par 
 SATIDS distinguishes itself by introducing an enhanced LSTM model designed to meticulously analyze network traffic, segregating it into normal behavior and potential threats. This differentiation is pivotal, as it not only flags immediate security concerns but also categorizes the nature of the attack and pinpoints its specific subtype, enabling a more targeted response to the intrusion. The deployment of SATIDS involves rigorous training and validation phases, utilizing comprehensive datasets like ToN-IoT and InSDN, which are reflective of real-world network environments and attack scenarios. This methodological approach ensures the system's effectiveness and reliability in detecting a wide array of cyber threats.\par 
-Upon comparison with existing Intrusion Detection Systems (IDS), SATIDS has demonstrated superior performance across several critical metrics, including accuracy, precision, F1-score, and overall detection rate. Such results highlight the system's exceptional capability in differentiating between benign and malicious traffic flows accurately, an essential feature for ensuring network security. Notably, SATIDS has proven highly effective in identifying and responding to sophisticated attack vectors, such as backdoor and Distributed Denial of Service (DDoS) attacks, that pose significant risks to IoT and SDN environments.\par 
+Upon comparison with existing Intrusion Detection Systems, SATIDS has demonstrated superior performance across several critical metrics, including accuracy, precision, F1-score, and overall detection rate. Such results highlight the system's exceptional capability in differentiating between benign and malicious traffic flows accurately, an essential feature for ensuring network security. Notably, SATIDS has proven highly effective in identifying and responding to sophisticated attack vectors, such as backdoor and Distributed Denial of Service attacks, that pose significant risks to IoT and SDN environments.\par 
 As a whole, the SATIDS framework, underpinned by an advanced LSTM network, offers a comprehensive and effective strategy for intrusion detection within IoT and SDN settings. Its ability to accurately detect and classify network anomalies represents a substantial advancement in cybersecurity technology, providing enhanced protection for complex networked systems against an evolving landscape of cyber threats. This research not only underscores the potential of deep learning in cybersecurity but also sets a new benchmark for the development of intelligent, adaptive IDS solutions capable of safeguarding the next generation of digital infrastructures\cite{ELSAYED2023102211}.
 \chapter{Theoretical Framework}
 \vspace{-18pt}
@@ -273,17 +272,16 @@ LSTM is a popular deep learning technique in RNN for time series prediction. Whi
 \newpage
 \section{Activation Function}
 \vspace{-18pt}
-The activation function in a neural network is a mathematical function that is applied to a network node's output and decides whether or not the output of the node should be activated based on the weighted total of the inputs. Softmax activation function was employed in the project's models.
-\subsection{Softmax}
+The activation function in a neural network is a mathematical function that is applied to a network node's output and decides whether or not the output of the node should be activated based on the weighted total of the inputs. Sigmoid activation function was employed in the project's model.
+\subsection{Sigmoid}
 \vspace{-18pt}
-Softmax is an activation function that scales numbers/logits into probabilities. The output of a Softmax is a vector (say v) with probabilities of each possible outcome. The probabilities in vector v sums to one for all possible outcomes or classes. Mathematically, Softmax is defined as: 
+The main reason why sigmoid function is used because it exists between 0 to 1. Therefore, it is especially used for models where the need is to predict the probability as an output.  Mathematically, Softmax is defined as: 
 \begin{eqnarray}
-	S(z_{i}) = \frac{exp(z_{i})}{\sum_{j=1}^{n} exp(z_{j})}
+	f(z) = \frac{1}{1 + e^{-z}}
 \end{eqnarray}
-where z is an input vector to a softmax function,S, n is number of classes(possible outcomes), denominator denotes a normalization term whereas the numerator denotes the standard exponential function applied on the i-th element of the input vector.
-\section{Categorical Cross-Entropy}
+\section{Binary Cross-Entropy}
 \vspace{-18pt}
-Categorical cross-entropy loss is utilized in multi-class classification tasks with more than two mutually exclusive classes. Similarly to the binary, this type of cross-entropy loss function quantifies the dissimilarity between the predicted probabilities and the true categorical labels. The categorical cross-entropy loss function is commonly used in neural networks with softmax activation in the output layer for multi-class classification tasks. By minimizing loss, the model learns to assign higher probabilities to the correct class while reducing the probabilities for incorrect classes, improving accuracy.
+It is a loss function used in machine learning to measure the difference between predicted binary outcomes and actual binary labels. It quantifies the dissimilarity between probability distributions, aiding model training by penalizing inaccurate predictions. It’s widely used in tasks like binary classification, where the goal is to categorize data into two classes. Binary cross entropy compares each of the predicted probabilities to actual class output which can be either 0 or 1. It then calculates the score that penalizes the probabilities based on the distance from the expected value i.e. how close or far from the actual value.
 \section{Adam Optimizer}
 \vspace{-18pt}
 The Adam optimizer is a popular optimization algorithm used in training deep neural networks. It combines the advantages of two other optimization techniques: AdaGrad and RMSProp. Adam maintains adaptive learning rates for each parameter by calculating an exponentially decaying average of past gradients and their squares. This allows it to dynamically adjust the learning rate for each parameter, typically resulting in faster convergence and better performance compared to traditional optimization algorithms. Adam also includes bias correction to prevent the initial steps from being too large. Overall, Adam is well-suited for a wide range of deep learning tasks due to its efficiency, robustness, and ease of use, often requiring minimal hyper parameter tuning.
@@ -293,14 +291,20 @@ Dropout is a regularization technique for neural networks, introduced by Geoffre
 \section{Evaluation Metrics}
 \vspace{-18pt}
 The most important performance indicator (Accuracy, AC) of intrusion detection is used to measure the performance of the model. In addition to the accuracy, we introduce the detection rate and false positive rate. The True Positive (TP) is equivalent to those correctly rejected, and it denotes the number of anomaly records that are identified as anomaly. The False Positive (FP) is the equivalent of incorrectly rejected, and it denotes the number of normal records that are identified as anomaly. The True Negative (TN) is equivalent to those correctly admitted, and it denotes the number of normal records that are identified as normal. The False Negative (FN) is equivalent to those incorrectly admitted, and it denotes the number of anomaly records that are identified as normal.
-\begin{figure}[tbh] % tbh means top, bottom or here (priority: left to right)
-	\begin{center}
-		%\includegraphics[width = 3in]{images/logo.png}
-		\includegraphics[width=6in]{images/confMat.png} 
-		\caption{Confusion Matrix} %figure name
-		\label{Confusion Matrix} % for referencing
-	\end{center}
-\end{figure}
+\begin{table}[tbh]
+	\centering
+	\begin{tabular}{|c|r|c|} %c,l,r represent alignment, number of c,l or r represent number of columns, | for Vertical line
+		\hline %horizontal line
+		  &0 &1  \\
+		\hline %horizontal line
+		0 &TP &FN  \\
+		\hline %horizontal line
+		1 &FP &TN\\
+		\hline
+	\end{tabular}
+	\caption{Confusion Matrix}
+	\label{Confusion Matrix}
+\end{table}
 \begin{equation}
 	Accuracy = \frac{TP + TN}{TP + TN + FP + FN}
 \end{equation} 
@@ -349,29 +353,37 @@ depicted in the diagram given below:
 \begin{figure}[tbh] % tbh means top, bottom or here (priority: left to right)
 \begin{center}
 	%\includegraphics[width = 3in]{images/logo.png}
-	\includegraphics[width=2in]{images/ww1.jpg} 
+	\includegraphics[width=1in]{images/workMan.jpg} 
 	\caption{Working mechanism of Network Intrusion Detection System} %figure name
 	\label{Working mechanism of Network Intrusion Detection System} % for referencing
 \end{center}
 \end{figure}
+\subsection{Packet Capture through Wireshark}
+\vspace{-18pt}
+To capture packets from Wireshark, we should first select the network interface from which we want to capture packets. After selecting the capture interface, we can start the capture session. Wireshark begins capturing packets from the chosen interface and displays them in real-time in the main capture window. We can stop the packet capture session at any time by clicking the "Stop" button in Wireshark's capture toolbar. Once the capture is stopped, we can save the packet records in a .pcap extension file.
 \subsection{Data set}
 \vspace{-18pt}
-InSDN is a comprehensive Software-Defined Network (SDN) dataset for Intrusion detection system evaluation. The new dataset includes the benign and various attack categories  that can occur in different elements of the SDN standard. InSDN considers different attack, including DoS, DDoS, brute force attack, web applications, exploitation, probe, and botnet. Furthermore, the normal traffic in the generated data covers  various  popular  application services such as HTTPS, HTTP, SSL, DNS, Email, FTP, SSH, etc. The dataset was generated by using four virtual machines (VMs). The first virtual machine is a Kali Linux one and represents the attacker server. The secondary machine is a Ubuntu 16.4 one, and acts on the ONOS controller. Third is an Ubuntu 16.4 machine to serve for the Mininet and OVS switch. The forth virtual machine is a Linux one based on metasploitable-2 to provide vulnerable services for demonstrating common vulnerabilities.\cite{article}
+InSDN is a comprehensive Software-Defined Network dataset for Intrusion detection system evaluation. The new dataset includes the benign and various attack categories  that can occur in different elements of the SDN standard. InSDN considers different attack, including DoS, DDoS, brute force attack, web applications, exploitation, probe, and botnet. Furthermore, the normal traffic in the generated data covers  various  popular  application services such as HTTPS, HTTP, SSL, DNS, Email, FTP, SSH, etc. The dataset was generated by using four virtual machines (VMs). The first virtual machine is a Kali Linux one and represents the attacker server. The secondary machine is a Ubuntu 16.4 one, and acts on the ONOS controller. Third is an Ubuntu 16.4 machine to serve for the Mininet and OVS switch. The forth virtual machine is a Linux one based on metasploitable-2 to provide vulnerable services for demonstrating common vulnerabilities.\cite{article}
 \begin{figure}[h] % tbh means top, bottom or here (priority: left to right)
 \begin{center}
 	%\includegraphics[width = 3in]{images/logo.png}
-	\includegraphics[width=3in]{images/ds2.png} 
+	\includegraphics[width=4in]{images/ds2.png} 
 	\caption{Features of InSDN dataset} %figure name
 	\label{} % for referencing
 \end{center}
 \end{figure}
+\subsection{Packet Features Extracted through CICflowmeter}
+\vspace{-18pt}
+The CICflowmeter takes the .pcap extension file and extracts 80 network traffic analysis features which are the same as the features of the InSDN dataset except for the label column.
 \subsection{Data Preprocessing}
 \vspace{-18pt}
-We used the InSDN datasets and first dropped some label values in the Label column. The label values that were dropped from the dataset were U2R, BFA and DoS. Then we dropped columns like Timestamp, Flow\_ID, Src\_IP and Dst\_IP before the normalization step. For the efficient training of neural networks, the numeric input data should be transformed by performing some pre-processing known as data normalization. It is used where inputs are widely divergent. Without such a process, networks would take a long time to train. Different schemes can be used to normalize the input data before it is fed to the input layer of neural network. We used Z-score normalization to normalize the attributes of our dataset. Z-score normalization refers to the process of normalizing every value in a dataset such that the mean of all of the values is 0 and the standard deviation is 1. Mathematically,
+We used the InSDN datasets and first dropped some label values in the Label column. The label values that were dropped from the dataset were U2R, BFA and DoS. Then we dropped columns like Timestamp, Flow\_ID, Src\_IP and Dst\_IP before the normalization step. For the efficient training of neural networks, the numeric input data should be transformed by performing some pre-processing known as data normalization. It is used where inputs are widely divergent. Without such a process, networks would take a long time to train. Different schemes can be used to normalize the input data before it is fed to the input layer of neural network. We used Min-Max normalization to normalize the attributes of our dataset. Min-max normalization is one of the most common ways to normalize data. For every feature, the minimum value of that feature gets transformed into a 0, the maximum value gets transformed into a 1, and every other value gets transformed into a decimal between 0 and 1. Mathematically,
 \begin{equation}
-New value = \frac{x- \mu}{\lambda}
+x' = \frac{x- min(x)}{max(x)-min(x)}
 \end{equation}
-where $x: $ Original value,\\ $\mu: $ Mean of data,\\ $\lambda: $ Standard deviation of data.
+where $x: $ Original value,\\ $max(x): $ Maximum value of x,\\ $min(x): $ Minimum value of x and \\ 
+$x': $ Normalised value. \par 
+For the label column in the dataset, we used Label encoding to convert the string values into numerical ones so as to fit in the LSTM model. 
 \subsection{Feature Extraction}
 \vspace{-18pt}
 Random Forest Classifier, or RFC, is an ensemble learning method that creates a forest of decision trees, where each tree is trained on a random subset of the data, and a random subset of the features. It provides a feature importance score based on how much each feature reduces impurity across all decision trees in the forest. Recursive Feature Elimination, or RFE is a feature selection technique that recursively fits a model and removes the least important features until the desired number of features is reached. It works by repeatedly training the model, ranking the features based on their importance, and removing the least important features. It is particularly useful when the number of features is large, as it helps to reduce the complexity of the model and improves its interpretability.
@@ -384,15 +396,11 @@ Algorithm for RFC with RFE is given as:
 \item Extract the names of the selected features.
 \item Create a new data frame containing the selected features.
 \end{enumerate}
-\subsection{Train and test the model}
-\vspace{-18pt}
-The model used in this project for NIDS is: Long Short-Term Memory (LSTM).
-\par 
-\subsubsection{Long Short-Term Memory (LSTM)}
+\subsection{LSTM Architecture}
 \vspace{-18pt}
 \begin{figure}[tbh]
 	\begin{center}
-		\includegraphics[width=3in]{images/lstm_model.png}
+		\includegraphics[width=2in]{images/lstm_Model.png}
 		\caption{LSTM model}
 		\label{LSTM model}
 	\end{center}
@@ -404,17 +412,28 @@ The block diagram shows the layers used in the trained LSTM model.
 	\item Dropout layer: This layer is a regularization technique used to prevent the model from overfitting on the training data.
 	\item Dense layer: This is the layer responsible for mapping the output of the LSTM layers to a final output. 
 \end{enumerate}
+In our model as we can see from the figure, the input to the LSTM model has dimensions of (None,1,10) which is due to the reshaping of the train and test datas done before passing it as a parameter to the model. The number 10 signifies the number of best features that we selected from the original dataset. The output from this first layer is fed into the second layer with different number of neuron after passing it through the dropout layer in between the two layers. The final dense layer has one neuron and outputs a single value. This model that we have trained is being used for binary classification task where the output is a single value that indicates whether the input is a type of attack or not.\par 
+The same model will then be used to classify the label of attacks in the next step of our predictions. If the traffic is classified as a type of attack by our first model, then the second model will then check to correctly predict the label of our attack traffic. This model also outputs a single value that maps to either a DDoS traffic or a Probe traffic.
 \section{Model Training and Optimization}
 \vspace{-18pt}
 \subsection{Model Training Algorithm}
 \vspace{-18pt}
 \begin{enumerate}[label=\roman*.]
 	\item Import the required libraries for data preprocessing including numpy, pandas and scikit-learn.
-	\item Using the train-test split function, divide the datasets into training and testing datasets in an 8:2 ratio
-	\item Definition of early stopping to prevent over fitting that determines the validation loss defined by a parameter patience.
-	\item Compile the model using Adam optimizer, loss function of categorical crossentropy and use accuracy as the metric.
-	\item Fit the model on the training set with early stopping as callback using the fit() function of the model. Save the object returned by the function in a history parameter.
+	\item Normalise the dataset and label encode the Label column.
+	\item Using the train-test split function, divide the datasets into training and testing datasets in an 8:2 ratio.
+	\item Reshape the train and test set to then pass it as a input parameter for the LSTM model.
+	\item Compile the model using Adam optimizer using an appropriate learning rate, loss function of binary crossentropy and use accuracy as the metric.
+	\item Fit the model on the training using the fit() function of the model. Save the object returned by the function in a history parameter.
 	\item  Plot for training and validation loss against number of epochs.
+\end{enumerate}
+\subsection{Model Deployment Algorithm}
+\vspace{-18pt}
+\begin{enumerate}[label=\roman*.]
+	\item Save the trained models to a keras file format. 
+	\item Load the trained models into the system for validation.
+	\item Test the trained models on unseen network traffic and verify its performance.
+	\item Load the model into the Tkinter application.
 \end{enumerate}
 \section{System Diagram}
 \vspace{-18pt}
@@ -442,8 +461,7 @@ The simulation was created in a virtual machine (Orcale VM VirtualBox) using Ubu
 \end{figure}
 \subsection{Software Development Model}
 \vspace{-18pt}
-Incremental model is a method of software engineering that combines the elements of waterfall model in iterative manner. It involves both development and maintenance. In this model requirements are broken down into multiple modules. Incremental development is done in steps from analysis design, implementation, testing/verification, maintenance. Each iteration passes through the requirements, design, coding and testing phases. The first increment is often a core product where the necessary requirements are addressed, and the extra features are added in the next increments. The core product is delivered to the client. Once the core product is analyzed by the client, there is plan development for the next increment.
-
+Incremental model is a method of software engineering that combines the elements of waterfall model in iterative manner. It involves both development and maintenance. In this model requirements are broken down into multiple modules. Incremental development is done in steps from analysis design, implementation, testing/verification, maintenance. Each iteration passes through the requirements, design, coding and testing phases. The first increment is often a core product where the necessary requirements are addressed, and the extra features are added in the next increments. The core product is delivered to the client. Once the core product is analyzed by the client, there is plan development for the next increment.\par
 \begin{figure}[tbh] % tbh means top, bottom or here (priority: left to right)
 	\begin{center}
 		%\includegraphics[width = 3in]{images/logo.png}
@@ -452,89 +470,170 @@ Incremental model is a method of software engineering that combines the elements
 		\label{Incremental Model} % for referencing
 	\end{center}
 \end{figure}
-\newpage
 \begin{itemize}
-	\item First build: The feature extraction process was done where features were reduced from 81 to 25 and demo model was built.
+	\item First build: The feature extraction process was done where features were reduced from 81 to 10 and demo model was built.
 	\item Second build: The model was optimized and validated through test data.
 	\item Third build: The model was tested with real world traffic and integrated with SDN.
 \end{itemize}
 \chapter{Results and Discussion}
 \vspace{-18pt}
-We have completed the development of the project along with obtaining the desirable output. We divided the original dataset into train and test set with 80/20 split. We then trained the LSTM model for the train set and checked the classification report and confusion matrix for both the test set and the validation set that we created.\par
-\begin{figure}[tbh] % tbh means top, bottom or here (priority: left to right)
+The project takes in various parameters and then provides the user with the most probable label for the respective inputs. Before training the model, we loaded the required datasets and performed necessary preprocessing steps. The feature extraction was done via Random Forest Classifier where we selected the top 10 features from the dataset. For training the LSTM model, we first reshaped the input shapes to pass it as an input to the model. We label encoded the values in the Label columns. The loss plot that we have calculated on the training and test dataset is to determine the model's training efficiency. The LSTM models that we designed takes in the parameters and trains upto the required number of epochs.  \par 
+\begin{figure}[tbh]
 	\begin{center}
 		%\includegraphics[width = 3in]{images/logo.png}
-		\includegraphics[width=3in]{images/confMatTest.png} 
-		\caption{Confusion Matrix for Test dataset} %figure name
-		\label{Confusion Matrix for Test dataset} 
+		\includegraphics[width=4in]{images/normalvovs.png} 
+		\caption{Loss plot of Normal and Attack labels for train and test dataset} %figure name
+		\label{Loss plot of Normal and Attack labels for train and test dataset} % for referencing
 	\end{center}
 \end{figure}
-\begin{figure}[tbh] % tbh means top, bottom or here (priority: left to right)
+\begin{figure}[tbh]
 	\begin{center}
 		%\includegraphics[width = 3in]{images/logo.png}
-		\includegraphics[width=3in]{images/confMatVal.png} 
-		\caption{Confusion Matrix for Validation dataset} %figure name
-		\label{Confusion Matrix for Validation dataset} 
-	\end{center}
-\end{figure}
-In the above figures, 0 denotes DDoS class, 1 denotes Normal class and Probe class is denoted by 2. As we can see, the model achieved 91\% accuracy for prediction of the labels in the validation set.
-\par 
-The project takes in various parameters and then provides the user with the most probable label for the respective inputs. Before training the model, we loaded the required datasets and performed necessary preprocessing steps. The feature extraction was done via Random Forest Classifier where we selected the top 25 features from the dataset. For training the LSTM model, we first reshaped the input shapes to pass it as an input to the model. We label encoded the values in the Label columns and then again to one-hot encoded format. The loss plot that we have calculated on the training and test dataset is to determine the model's training efficiency. The LSTM model that we designed takes in the parameters and trains upto the required number of epochs. 
-\begin{figure}[tbhh]
-	\begin{center}
-		%\includegraphics[width = 3in]{images/logo.png}
-		\includegraphics[width=4in]{images/lstm_multi_loss.png} 
-		\caption{Loss plot for train and test dataset} %figure name
+		\includegraphics[width=4in]{images/attloss.png} 
+		\caption{Loss plot of Normal and Attack labels for train and test dataset} %figure name
 		\label{Loss plot for train and test dataset} % for referencing
 	\end{center}
 \end{figure}
-\chapter{Conclusion}
-\vspace{-18pt}
-\section{Conclusion}
-\vspace{-18pt}
-We have developed a Network Intrusion Detection System which is capable of detecting 91\% of attacks in a computer network. The features were reduced from original 81 features to 25 features  by using Random Forest Algorithm. We used the InSDN dataset for our assessments and obtained promising results.
-\section{Limitations}
-\begin{enumerate}[label=\roman*.]
-	\item Our system can only detect DDoS, Normal and Probe traffics.
-	\item Our system is only 91\% accurate for real world traffic.
-\end{enumerate}
-\section{Future Enhancements}
-\vspace{-18pt}
-Additional dataset containing more variety of attacks can be added and used to train the model to increase the accuracy as well as to detect more variety of attacks.
-\chapter{Appendix}
-%conf mat,
+We divided the original dataset into train and test set with 80/20 split. We then trained the LSTM models for the train set and checked the confusion matrix for both the test set and the validation set that we created, for both binary classifications. The first LSTM model helps distinguish between attacks and normal traffic. If the traffic is classified as an attack by the first model, the second LSTM model then checks for the label of the attack(DDoS or Probe) to predict the correct class.\par
+ \begin{figure}[tbh] % tbh means top, bottom or here (priority: left to right)
+	\begin{center}
+		%\includegraphics[width = 3in]{images/logo.png}
+		\includegraphics[width=4in]{images/testmat.png} 
+		\caption{Confusion Matrix of Normal and Attack labels for Test dataset} %figure name
+		\label{Confusion Matrix of Normal and Attack labels for Test dataset} 
+	\end{center}
+\end{figure}
+\begin{table}[tbh]
+	\centering
+	\begin{tabular}{|c|r|c|l|} %c,l,r represent alignment, number of c,l or r represent number of columns, | for Vertical line
+		\hline %horizontal line
+		Label  &Precision &Recall &F1-score \\
+		\hline %horizontal line
+		Abnormal &0.98 &1.00 &0.99 \\
+		\hline %horizontal line
+		Normal &1.00 &0.98 &0.99\\
+		\hline
+	\end{tabular}
+	\caption{Evaluation Metrics of Normal and Attack labels for Test dataset}
+	\label{Evaluation Metrics of Normal and Attack labels for test dataset}
+\end{table}
+ \begin{figure}[tbh] % tbh means top, bottom or here (priority: left to right)
+ 	\begin{center}
+ 		%\includegraphics[width = 3in]{images/logo.png}
+ 		\includegraphics[width=4in]{images/confMatnormvatt.png} 
+ 		\caption{Confusion Matrix of Normal and Attack labels for Validation dataset} %figure name
+ 		\label{Confusion Matrix of Normal and Attack labels for Validation dataset} 
+ 	\end{center}
+ \end{figure}
+For the Normal and Abnormal traffics, the confusion matrix for the validation test tells us the following:\\ 
+True Positive(TP) : 9502. These are the traffics that were correctly identified as attacks.\\
+False Positive(FP): 433. These are the datas that were incorrectly identified as attacks.\\
+False Negative(FN): 0. No datas were incorrectly identified as Normal label.\\
+True Negative(TN): 3614. These datas are correctly identified as Normal traffic.\\
+
+\begin{table}[tbh]
+	\centering
+	\begin{tabular}{|c|r|c|l|} %c,l,r represent alignment, number of c,l or r represent number of columns, | for Vertical line
+		\hline %horizontal line
+		Label  &Precision &Recall &F1-score \\
+		\hline %horizontal line
+		Abnormal &0.96 &1.00 &0.98 \\
+		\hline %horizontal line
+		Normal &1.00 &0.89 &0.94\\
+		\hline
+	\end{tabular}
+	\caption{Evaluation Metrics of Normal and Attack labels for Validation dataset}
+	\label{Evaluation Metrics of Normal and Attack labels for validation dataset}
+\end{table}
+For the Abnormal traffics, the confusion matrix for the validation test tells us the following:\\ 
+True Positive(TP) : 3042. These are the traffics that were correctly identified as DDoS attacks.\\
+False Positive(FP): 8. These are the datas that were incorrectly identified as DDoS attacks.\\
+False Negative(FN): 1458. These datas were incorrectly identified as Probe label.\\
+True Negative(TN): 4994. These datas are correctly identified as Probe traffic.\par 
 \begin{figure}[tbh] % tbh means top, bottom or here (priority: left to right)
 	\begin{center}
 		%\includegraphics[width = 3in]{images/logo.png}
-		\includegraphics[width=4in]{images/labelsBefore.png} 
-		\caption{Initial Labels in the dataset} %figure name
-		\label{Initial Labels in the dataset} 
+		\includegraphics[width=4in]{images/valattacksmat.png} 
+		\caption{Confusion Matrix of Attack labels for Validation dataset} %figure name
+		\label{Confusion Matrix of Attack labels for Validation dataset} 
 	\end{center}
 \end{figure}
-\begin{figure}[tbh]
-	\begin{center}
-		\includegraphics[width=4in]{images/labelsAfter.png}
-		\caption{Final labels used for the project }
-		\label{Final labels used for the project}
-	\end{center}
-\end{figure}
-\begin{figure}[tbh]
-	\begin{center}
-		\includegraphics[width=4in]{images/topF.png}
-		\caption{Top 25 features selected from the dataset }
-		\label{Top 25 features selected from the dataset}
-	\end{center}
-\end{figure}
-\begin{figure}[tbh]
-	\begin{center}
-		\includegraphics[width=5in]{images/annex.png}
-		\caption{Screenshot of the output}
-		\label{Screenshot of the output}
-	\end{center}
-\end{figure}
+\begin{table}[tbh]
+	\centering
+	\begin{tabular}{|c|r|c|l|} %c,l,r represent alignment, number of c,l or r represent number of columns, | for Vertical line
+		\hline %horizontal line
+		Label  &Precision &Recall &F1-score\\
+		\hline %horizontal line
+		DDoS &1.00 &0.68 &0.81\\
+		\hline %horizontal line
+		Probe &0.77 &1.00 &0.87\\
+		\hline
+	\end{tabular}
+	\caption{Evaluation Metrics of Attack labels for Validation dataset}
+	\label{Evaluation Metrics of Attack labels for validation dataset}
+\end{table}
+From the figures obtained from the evaluation on test and validation sets, we can see that our model achieves satisfying results on the input data. \par
+\begin{table}[tbh]
+	\centering
+	\begin{tabular}{|c|r|c|} %c,l,r represent alignment, number of c,l or r represent number of columns, | for Vertical line
+		\hline %horizontal line
+		  &Model 1 &Model 2 \\
+		\hline %horizontal line
+		Test set &0.99 &0.97 \\
+		\hline %horizontal line
+		Validation set &blank &0.85 \\
+		\hline
+	\end{tabular}
+	\caption{Comparison of accuracy}
+	\label{Accuracy comparison}
+\end{table}
+The False Positive rate in test dataset for normal and attack classification was measured as 0.0224 whereas it was 0.106 in the validation dataset. Similarly for the attack labels in validation dataset we obtained 0.0015 as False Positive rate which is a very promising number.
+\chapter{Conclusion}
+\vspace{-18pt}
+\section{Limitations}
+\vspace{-18pt}
+\begin{enumerate}[label=\roman*.]
+	\item Our system can only detect DDoS, Normal and Probe traffics.
+	\item Our system is only 97\% accurate for binary classification for normal and attack labels and only 85\% accurate in predicting the correct attack label in real world traffic.
+	\item Our system cannot perform real time monitoring.
+\end{enumerate}
+\section{Future Enhancements}
+\vspace{-18pt}
+Additional dataset containing more variety of attacks can be added and used to train the model to increase the accuracy as well as to detect more variety of attacks. Our system works on batch processing. This can be changed into a real time monitoring system by doing a packet feature extraction through the system itself rather than using CICflowmeter and Wireshark.
+\section{Conclusion}
+\vspace{-18pt}
+Therefore in this project, we developed a Network Intrusion Detection System which is capable of detecting attacks in a computer network. The features were reduced from original 81 features to 10 features  by using Random Forest Algorithm. We used the InSDN dataset for our assessments and obtained promising results to reach our objective. Our project seeks to develop a robust system that can effectively detect the intrusions within a computer network.
+\newpage
 %Reference
 \renewcommand\bibname{References} % Change heading to References
 \bibliographystyle{IEEEtran} % to use IEEE Format for referencing
 \addcontentsline{toc}{chapter}{References} % to add references in TOC
 \bibliography{library} % specify the .bib file containing reference information 
+
+\chapter*{Appendix}
+\addcontentsline{toc}{chapter}{Appendix}
+\begin{figure}[tbh]
+	\begin{center}
+		\includegraphics[width=4in]{images/binvattlab.png}
+	\end{center}
+\end{figure}
+\begin{figure}[tbh]
+	\begin{center}
+		\includegraphics[width=3in]{images/top10att.png}
+	\end{center}
+\end{figure}
+\begin{figure}[tbh]
+	\begin{center}
+		\includegraphics[width=5in]{images/top10normatt.png}
+	\end{center}
+\end{figure}
+\chapter*{Annex}
+\addcontentsline{toc}{chapter}{Annex}
+\begin{figure}[tbh]
+	\begin{center}
+		\includegraphics[width=5in]{images/annex.png}
+	\end{center}
+\end{figure}
+%\chapter*{brother}
+%\addcontentsline{toc}{chapter}{bro}
 \end{document}
