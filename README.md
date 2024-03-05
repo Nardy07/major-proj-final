@@ -8,11 +8,9 @@ Major project on Network Intrusion Detection System
   - contains 2/3 of the validation set we created(DDOS dataset had size greater than 25 MB)
 - micMultiBB1
   - a folder containing the saved LSTM model
-- X_val_nulti_with_ping.csv and y_val_multi_with_ping.csv
-  - validation datasets used in modelLoading.py/.ipynb
-- for_test.ipynb
+- test_try.ipynb
   - preprocessing the validation dataset
-- preprocessBB.py
+- try.ipynb
   - preprocessing the original dataset
 - lstMulti.py and lstMulti.ipynb
   - code containing the LSTM model used in the project.
