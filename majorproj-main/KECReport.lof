@@ -1,21 +1,22 @@
 \acswitchoff 
 \noaddvspace 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Gantt Chart\relax }}{5}{figure.caption.8}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Gantt Chart\relax }}{5}{figure.caption.9}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces LSTM\relax }}{13}{figure.caption.9}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces LSTM\relax }}{13}{figure.caption.10}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Working mechanism of Network Intrusion Detection System\relax }}{20}{figure.caption.11}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Features of InSDN dataset\relax }}{22}{figure.caption.12}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces LSTM model\relax }}{24}{figure.caption.13}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Use case Diagram of Network Intrusion Detection System\relax }}{26}{figure.caption.14}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Simulation Environment\relax }}{27}{figure.caption.15}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Incremental Model\relax }}{28}{figure.caption.16}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Working mechanism of Network Intrusion Detection System\relax }}{20}{figure.caption.12}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Features of InSDN dataset\relax }}{22}{figure.caption.13}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces LSTM model\relax }}{24}{figure.caption.14}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Use case Diagram of Network Intrusion Detection System\relax }}{26}{figure.caption.15}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Simulation Environment\relax }}{27}{figure.caption.16}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Incremental Model\relax }}{28}{figure.caption.17}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Loss plot of Normal and Attack labels for train and test dataset\relax }}{29}{figure.caption.17}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Loss plot of Normal and Attack labels for train and test dataset\relax }}{30}{figure.caption.18}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Confusion Matrix of Normal and Attack labels for Test dataset\relax }}{31}{figure.caption.19}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Confusion Matrix of Normal and Attack labels for Validation dataset\relax }}{32}{figure.caption.21}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Confusion Matrix of Attack labels for Validation dataset\relax }}{32}{figure.caption.23}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Loss plot of Normal and Attack labels for train and test dataset\relax }}{29}{figure.caption.18}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Loss plot of Normal and Attack labels for train and test dataset\relax }}{30}{figure.caption.19}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Confusion Matrix of Normal and Attack labels for Test dataset\relax }}{31}{figure.caption.20}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Confusion Matrix of Normal and Attack labels for Validation dataset\relax }}{32}{figure.caption.22}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Confusion Matrix of Attack labels for Test dataset\relax }}{32}{figure.caption.24}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Confusion Matrix of Attack labels for Validation dataset\relax }}{33}{figure.caption.26}%
 \addvspace {10\p@ }

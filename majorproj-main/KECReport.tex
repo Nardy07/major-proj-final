@@ -10,9 +10,9 @@
 \newcommand{\submittedBy}%Specify Names and Roll/Symbol Numbers of the Project Group Members
 {
 %Edit Member Names and Roll/Symbol No. and adjust width (\makebox[width]) if necessary 
-\makebox[7cm]{Aman Devkota  \hfill[KAN076BCT010]}\\
-\makebox[7cm]{Ankur Karmacharya  \hfill[KAN076BCT013]}\\
-\makebox[7cm]{Prashad Adhikary  \hfill[KAN076BCT056]}
+\makebox[7cm]{Aman Devkota  \hfill[41407]}\\
+\makebox[7cm]{Ankur Karmacharya  \hfill[41410]}\\
+\makebox[7cm]{Prashad Adhikary  \hfill[41451]}
 %\makebox[9cm]{Member Name \hfill [Roll/Symbol No.]}\\
 } % Note that You must write your "Symbol Numbers"(Exam Roll Numbers) for Final Defenses
 
@@ -20,14 +20,14 @@
 \newcommand{\hod}{Er. Rabindra Khati} %specify Head ot the department
 \newcommand{\defYear}{2024} %Defense Year
 \newcommand{\defMonth}{March} %Defense Month- January, February, ...
-\newcommand{\defDay}{4} %specify Defense Day- 1, 2, ...
+\newcommand{\defDay}{6} %specify Defense Day- 1, 2, ...
 
 \newif\ifhassupervisor
 \hassupervisortrue % to display supervisor name use command- \hassupervisortrue
 \newcommand{\supervisor}{Dr. Babu Ram Dawadi} % Specify Name of Supervisor for Major Project (write "none" if no Supervisor is assigned)
 \newcommand{\degSup}{Asst. Professor\\Department of Electronics and Computer Engineering, IOE\\Pulchowk} %Specify Designation of Supervisor for Major Project, use multiple lines (\\) if necessary
-\newcommand{\external}{External's Name} %Specify Name of External for Major Project (Required for Black Book)
-\newcommand{\degExternal}{External's Designation\\Second Line of Designation (if required)} %Specify Name of External for Major Project (Required for Black Book) , use multiple lines (\\) if necessary
+\newcommand{\external}{} %Specify Name of External for Major Project (Required for Black Book)
+\newcommand{\degExternal}{} %Specify Name of External for Major Project (Required for Black Book) , use multiple lines (\\) if necessary
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -48,7 +48,7 @@
 %\KECcopyright % defined in KECReportFormat.tex
 
 %Approval Page is required for FINAL(Black Book Binded) REPORT of MAJOR PROJECT only. Comment this section for other Reports. 
-%\KECapproval % defined in KECReportFormat.tex
+\KECapproval % defined in KECReportFormat.tex
 
 \chapter*{Abstract} % The summary of your report
 \addcontentsline{toc}{chapter}{Abstract}%to include %this chapter in TOC 
@@ -93,14 +93,29 @@ Finally we would like to thank our family and friends for all the support and en
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter*{List of Abbreviations}
+\textbf{API}: Application Programming Interface\\
+\textbf{CNN}: Convolutional Neural Network\\
+\textbf{DPI}: Deep Packet Inspection\\
 \textbf{DOS}: Denial of Service\\
+\textbf{DDOS}: Distributed Denial of Service\\
+\textbf{DNS}: Domain Name System\\
 \textbf{FN}: False  Negative \\
 \textbf{FP}: False Positive\\
+\textbf{FTP}: File Transfer Protocol\\
+\textbf{GRU}: Gated Recurrent Unit\\
+\textbf{HTTP}: Hypertext Transfer Protocol\\
+\textbf{HTTPS}: Hypertext Transfer Protocol Secure\\
+\textbf{IoT}: Internet of Things\\
 \textbf{IDS}: Intrusion Detection System\\
 \textbf{LSTM}: Long Short-Term Memory\\
+\textbf{ONOS}: Open Network Operating System\\
+\textbf{OVS}: Open vSwitch\\
 \textbf{RFC}: Random Forest Classifier\\
 \textbf{RFE}: Recursive Feature Elimination\\
-\textbf{R2L}: Root to Local \\
+\textbf{RNN}: Recurrent Neural Network\\
+\textbf{R2L}: Root to Local\\
+\textbf{SSH}: Secure Shell\\
+\textbf{SSL}: Secure Sockets Layer\\
 \textbf{SDN}: Software Defined Networking \\
 \textbf{TN}: True Negative\\
 \textbf{TP}: True Positive\\
@@ -264,7 +279,7 @@ LSTM is a popular deep learning technique in RNN for time series prediction. Whi
 \begin{figure}[tbh] % tbh means top, bottom or here (priority: left to right)
 	\begin{center}
 		%\includegraphics[width = 3in]{images/logo.png}
-		\includegraphics[width=5in]{images/l1.png} 
+		\includegraphics[width=5in]{images/lstmmod.png} 
 		\caption{LSTM} %figure name
 		\label{LSTM} % for referencing
 	\end{center}
@@ -275,7 +290,7 @@ LSTM is a popular deep learning technique in RNN for time series prediction. Whi
 The activation function in a neural network is a mathematical function that is applied to a network node's output and decides whether or not the output of the node should be activated based on the weighted total of the inputs. Sigmoid activation function was employed in the project's model.
 \subsection{Sigmoid}
 \vspace{-18pt}
-The main reason why sigmoid function is used because it exists between 0 to 1. Therefore, it is especially used for models where the need is to predict the probability as an output.  Mathematically, Softmax is defined as: 
+The main reason why sigmoid function is used because it exists between 0 to 1. Therefore, it is especially used for models where the need is to predict the probability as an output.  Mathematically, Sigmoid is defined as: 
 \begin{eqnarray}
 	f(z) = \frac{1}{1 + e^{-z}}
 \end{eqnarray}
@@ -329,7 +344,7 @@ The F1 Score is the weighted average of Precision and Recall. Therefore, this sc
 Software-Defined Networking is a revolutionary network architecture approach that decouples the control plane from the data plane in traditional networking models. By centralizing control functions in a software-based controller, SDN enables dynamic management and programmability of network resources. This separation allows administrators to orchestrate network behaviour centrally, facilitating rapid provisioning, configuration, and optimization of network services. SDN simplifies network management by abstracting underlying infrastructure complexities and providing a unified interface for network automation and orchestration. Through programmable interfaces and open standards like OpenFlow, SDN empowers organizations to tailor network behaviour to specific application requirements, enhance agility, and support innovative network services.
 \section{Mininet}
 \vspace{-18pt}
-Mininet is an open-source software emulation platform for creating virtual networks. It allows users to create a realistic network topology on a single machine for testing, research, and educational purposes. Mininet provides a lightweight and easy-to-use environment for experimenting with SDN (Software-Defined Networking) concepts without the need for physical networking hardware. Mininet allows users to define custom network topologies using a simple Python-based API. Users can specify the number and types of nodes (switches, routers, hosts), the links between them, and even customize parameters such as bandwidth, delay, and loss rates. Mininet utilizes Linux container technology to create lightweight virtual network devices. Each network element (node) in a Mininet topology runs as a separate process inside a Linux container, providing isolation and efficient resource utilization. Mininet supports integration with various SDN controllers, including OpenDaylight, ONOS, Ryu, POX, and others. Users can choose their preferred SDN controller and configure Mininet to connect to it, enabling experimentation with different controller functionalities and SDN applications.
+Mininet is an open-source software emulation platform for creating virtual networks. It allows users to create a realistic network topology on a single machine for testing, research, and educational purposes. Mininet provides a lightweight and easy-to-use environment for experimenting with SDN concepts without the need for physical networking hardware. Mininet allows users to define custom network topologies using a simple Python-based API. Users can specify the number and types of nodes (switches, routers, hosts), the links between them, and even customize parameters such as bandwidth, delay, and loss rates. Mininet utilizes Linux container technology to create lightweight virtual network devices. Each network element (node) in a Mininet topology runs as a separate process inside a Linux container, providing isolation and efficient resource utilization. Mininet supports integration with various SDN controllers, including OpenDaylight, ONOS, Ryu, POX, and others. Users can choose their preferred SDN controller and configure Mininet to connect to it, enabling experimentation with different controller functionalities and SDN applications.
 \section{POX Controller}
 \vspace{-18pt}
 POX Controller is an open-source software-defined networking controller framework developed in Python. As a controller, it serves as the centralized brain of an SDN network, managing and orchestrating the flow of data traffic within the network. POX Controller enables network administrators to dynamically control and configure network devices, such as switches and routers, by providing a programmable interface for implementing network policies and forwarding rules. Built on the event-driven architecture of Python, POX Controller offers flexibility and extensibility, allowing users to develop custom network applications and services tailored to their specific requirements. It supports various SDN protocols, including OpenFlow, enabling seamless integration with SDN-enabled devices.
@@ -530,7 +545,6 @@ True Positive(TP) : 9502. These are the traffics that were correctly identified 
 False Positive(FP): 433. These are the datas that were incorrectly identified as attacks.\\
 False Negative(FN): 0. No datas were incorrectly identified as Normal label.\\
 True Negative(TN): 3614. These datas are correctly identified as Normal traffic.\\
-
 \begin{table}[tbh]
 	\centering
 	\begin{tabular}{|c|r|c|l|} %c,l,r represent alignment, number of c,l or r represent number of columns, | for Vertical line
@@ -545,11 +559,33 @@ True Negative(TN): 3614. These datas are correctly identified as Normal traffic.
 	\caption{Evaluation Metrics of Normal and Attack labels for Validation dataset}
 	\label{Evaluation Metrics of Normal and Attack labels for validation dataset}
 \end{table}
+\begin{figure}[tbh] % tbh means top, bottom or here (priority: left to right)
+	\begin{center}
+		%\includegraphics[width = 3in]{images/logo.png}
+		\includegraphics[width=4in]{images/confusion_matrix_attack-ezgif.com-webp-to-png-converter.png} 
+		\caption{Confusion Matrix of Attack labels for Test dataset} %figure name
+		\label{Confusion Matrix of Attack labels for Test dataset} 
+	\end{center}
+\end{figure}
 For the Abnormal traffics, the confusion matrix for the validation test tells us the following:\\ 
 True Positive(TP) : 3042. These are the traffics that were correctly identified as DDoS attacks.\\
 False Positive(FP): 8. These are the datas that were incorrectly identified as DDoS attacks.\\
 False Negative(FN): 1458. These datas were incorrectly identified as Probe label.\\
 True Negative(TN): 4994. These datas are correctly identified as Probe traffic.\par 
+\begin{table}[tbh]
+	\centering
+	\begin{tabular}{|c|r|c|l|} %c,l,r represent alignment, number of c,l or r represent number of columns, | for Vertical line
+		\hline %horizontal line
+		Label  &Precision &Recall &F1-score \\
+		\hline %horizontal line
+		DDoS &0.99 &1.00 &0.99 \\
+		\hline %horizontal line
+		Probe &0.99 &1.00 &0.99\\
+		\hline
+	\end{tabular}
+	\caption{Evaluation Metrics of Attack labels for Test dataset}
+	\label{Evaluation Metrics of Attack labels for test dataset}
+\end{table}
 \begin{figure}[tbh] % tbh means top, bottom or here (priority: left to right)
 	\begin{center}
 		%\includegraphics[width = 3in]{images/logo.png}
@@ -581,13 +617,13 @@ From the figures obtained from the evaluation on test and validation sets, we ca
 		\hline %horizontal line
 		Test set &0.99 &0.97 \\
 		\hline %horizontal line
-		Validation set &blank &0.85 \\
+		Validation set &0.99 &0.85 \\
 		\hline
 	\end{tabular}
 	\caption{Comparison of accuracy}
 	\label{Accuracy comparison}
 \end{table}
-The False Positive rate in test dataset for normal and attack classification was measured as 0.0224 whereas it was 0.106 in the validation dataset. Similarly for the attack labels in validation dataset we obtained 0.0015 as False Positive rate which is a very promising number.
+The False Positive rate in test dataset for normal and attack classification was measured as 0.0224 whereas it was 0.106 in the validation dataset. Similarly for the attack labels in test dataset we got 0.0001 and in validation dataset we obtained 0.0015 as False Positive rates which are very promising numbers.
 \chapter{Conclusion}
 \vspace{-18pt}
 \section{Limitations}
@@ -619,14 +655,20 @@ Therefore in this project, we developed a Network Intrusion Detection System whi
 \end{figure}
 \begin{figure}[tbh]
 	\begin{center}
-		\includegraphics[width=5in]{images/attlab.png}
+		\includegraphics[width=6in]{images/top10normatt.png}
 	\end{center}
 \end{figure}
 \begin{figure}[tbh]
 	\begin{center}
-		\includegraphics[width=6in]{images/top10normatt.png}
+		\includegraphics[width=3in]{images/attlabels.png}
 	\end{center}
 \end{figure}
+\begin{figure}[tbh]
+	\begin{center}
+		\includegraphics[width=5in]{images/attlab.png}
+	\end{center}
+\end{figure}
+
 \chapter*{Annex}
 \addcontentsline{toc}{chapter}{Annex}
 \begin{figure}[tbh]
